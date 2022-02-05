@@ -1,38 +1,234 @@
-.App {
+/* main template features */
+html,
+.navbar,
+.dropdown-menu {
+  font-family: Helvetica !important;
+}
+
+.navbar {
+  border-bottom: 1px solid #000;
+  font-family: Helvetica !important;
+  background-color: rgb(245, 245, 245);
+}
+
+body {
+  font-family: Helvetica !important;
+  background: rgba(207, 207, 207, 0.596) !important;
+}
+
+footer {
+  border-top: 1px solid #000;
+  padding: 5px;
+  padding-top: 10px;
+  font-family: Helvetica !important;
+  background-color: rgb(245, 245, 245) !important;
+}
+
+footer h4 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.sjcon {
+  padding: 5px;
+}
+
+.navbar ul li a:hover,
+.navbar .active a,
+.navbar a.active {
+  color: #007bff !important;
+}
+
+.navbar a.dropdown-item,
+.navbar div.dropdown-menu,
+.create-forum-post a.dropdown-item,
+.create-forum-post div.dropdown-menu {
+  background: rgb(245, 245, 245);
+}
+
+.navbar a.dropdown-item:hover,
+.navbar .dropdown a.active,
+.create-forum-post a.dropdown-item:hover {
+  background: #007bff !important;
+  color: rgb(245, 245, 245) !important;
+}
+
+.dropdown-divider {
+  border-color: rgb(199, 199, 199) !important;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 0.5rem rgb(252, 59, 0));
+}
+
+.aftership-poweredBy {
+  display: none;
+}
+
+.header-faq {
+  background-color: rgb(17, 141, 141);
+  width: 100%;
+  height: 100px;
   text-align: center;
+  padding-top: 30px;
+  border-radius: 10px 10px 0 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box {
+  background-color: rgb(241, 238, 238);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+details.dt {
+  border: 1px solid black;
+
+  padding: 15px;
+  margin-bottom: 2px;
+}
+details[open].dt {
+  background-color: rgb(235, 229, 229);
+}
+details li {
+  padding-top: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* back to top */
+.myBtn {
+  position: fixed; /* Fixed/sticky position */
+  bottom: 10px; /* Place the button at the bottom of the page */
+  right: 5px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background: none;
+  /* background: #CCC url("../images/Up-Arrow2.png") no-repeat center 43%; */
+  /* color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  /* padding: 15px; /* Some padding */
+  /* border-radius: 10px; /* Rounded corners */
+  /* font-size: 28px; /* Increase font size */
+}
+
+.myBtn:hover {
+  filter: saturate(200%) drop-shadow(2px 2px 5px rgb(0, 0, 0, 0.5));
+}
+/* End back to top */
+
+/* Footer Menu */
+.reason-to-buy {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.reason-to-buy h2,
+.reason-to-buy .h2,
+footer h4 {
+  font-size: 1.5em;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  margin: 25px 0 25px;
+}
+
+.section {
+  display: block;
+}
+
+.reason-to-buy-wrapper {
+  width: 1600px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.reason-to-buy-inner {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0 0 0 50px;
+  text-align: left;
 }
 
-.App-link {
-  color: #61dafb;
+.reason-to-buy-wrapper .grid__cell {
+  display: flex;
+  align-items: flex-start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.reason-to-buy-wrapper .grid__cell img {
+  height: 60px;
+  margin-right: 10px;
+}
+
+.reason-to-buy h3,
+.reason-to-buy .h3 {
+  font-size: 1.12em;
+  font-weight: bold;
+}
+
+.reason-to-buy-wrapper .grid__cell h3,
+.reason-to-buy-wrapper .grid__cell .h3 {
+  margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .reason-to-buy-wrapper .grid__cell {
+    margin-bottom: 10px;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width: 800px) {
+  .reason-to-buy-wrapper .grid__cell img {
+    width: 60px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .reason-to-buy-inner {
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: auto;
+    justify-content: flex-start;
+  }
+}
+
+/*  Forum stuff */
+
+.wrap-col {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin: 0;
+}
+
+.wrap-col p {
+  text-align: justify;
+}
+
+.wrap-border {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+hr.forum-hr {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .wrap-col {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .wrap-border {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: none;
+    border-right: none;
   }
 }
