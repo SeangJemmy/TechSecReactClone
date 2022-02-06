@@ -52,6 +52,7 @@ function App() {
         <Route path="/pp" element={<Pp />} />
         <Route path="/tos" element={<Tos />} />
         <Route path="/tracking" element={<Tracking />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
       <FooterComp />
       {showButton && (
@@ -74,6 +75,31 @@ const Home = () => (
       Apple iPhones On Sale
     </h2>
     <Product />
+  </div>
+);
+
+const Error404 = () => (
+  <div className="m-3 row">
+    <a className="mx-auto mt-4" href="./">
+      <img
+        alt=""
+        className="img-fluid"
+        loading="lazy"
+        src="./images/error.png"
+      />
+    </a>
+
+    <h1 className="col-12 font-weight-bold text-center my-4 text-danger">
+      Error 404 - Page Not Found
+    </h1>
+    <button
+      className="mb-4 d-flex btn btn-lg btn-primary mx-auto"
+      onClick={() => {
+        window.location.href = "./";
+      }}
+    >
+      Go to Home Page
+    </button>
   </div>
 );
 
