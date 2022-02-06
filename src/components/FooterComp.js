@@ -1,14 +1,5 @@
 import React, { Component } from "react";
 import "../App.css";
-import {
-  Navbar,
-  Nav,
-  NavDropdowwn,
-  Form,
-  FormControl,
-  Button,
-} from "react-bootstrap";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SubscribeComp from "./SubscribeComp";
 
 const thisYear = new Date().getFullYear();
@@ -24,7 +15,7 @@ function FooterComp() {
         <div className="reason-to-buy-wrapper">
           <div className="reason-to-buy-inner grid">
             <div className="grid__cell pr-5 mr-10">
-              <img src="./images/customer-satisfaction_1.png" />
+              <img alt="" src="./images/customer-satisfaction_1.png" />
               <div>
                 <h3>Satisfaction Guarantee</h3>
                 <p>
@@ -35,7 +26,7 @@ function FooterComp() {
             </div>
 
             <div className="grid__cell pr-5 mr-10">
-              <img src="./images/safety.png" />
+              <img alt="" src="./images/safety.png" />
               <div>
                 <h3>Verified & Trusted</h3>
                 We verify each product details and prices professionally to
@@ -44,7 +35,7 @@ function FooterComp() {
             </div>
 
             <div className="grid__cell pr-5 mr-10">
-              <img src="./images/sale.png" />
+              <img alt="" src="./images/sale.png" />
               <div>
                 <h3>Great Value</h3>
                 <p>
@@ -55,7 +46,7 @@ function FooterComp() {
             </div>
 
             <div className="grid__cell pr-5 mr-10">
-              <img src="./images/world.png" />
+              <img alt="" src="./images/world.png" />
               <div>
                 <h3>Local Optimization</h3>
                 <p>

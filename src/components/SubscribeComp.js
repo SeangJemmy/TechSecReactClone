@@ -1,14 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import "../App.css";
-import {
-  Navbar,
-  Nav,
-  NavDropdowwn,
-  Form,
-  FormControl,
-  Button,
-} from "react-bootstrap";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import $ from "jquery";
 
 function valEmail(email) {
@@ -58,7 +49,7 @@ function SubscribeComp() {
             type="submit"
             id="subscribeEmail"
           >
-            <img src="./images/arrow-filled.png" width="15px" />
+            <img alt="" src="./images/arrow-filled.png" width="15px" />
           </button>
         </div>
       </div>

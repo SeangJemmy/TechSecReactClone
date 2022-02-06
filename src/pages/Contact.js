@@ -1,6 +1,5 @@
 import "../App.css";
 import $ from "jquery";
-import { useState } from "react";
 
 function Contact() {
   const scriptURL =

@@ -1,20 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import "../App.css";
-import {
-  Navbar,
-  Nav,
-  NavDropdowwn,
-  Form,
-  FormControl,
-  Button,
-} from "react-bootstrap";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  NavLink,
-} from "react-router-dom";
+import { BrowserRouter as NavLink } from "react-router-dom";
 
 function NavbarComp() {
   return (

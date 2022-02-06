@@ -59,7 +59,12 @@ function App() {
 
       {showButton && (
         <button onClick={scrollToTop} className="myBtn">
-          <img className="UpArrow_style" src="images/Up-Arrow.svg" width="30" />
+          <img
+            className="UpArrow_style"
+            alt=""
+            src="images/Up-Arrow.svg"
+            width="30"
+          />
         </button>
       )}
     </>

@@ -9,6 +9,7 @@ function Fpass() {
             <div className="p-3">
               <a className="logo" href="./">
                 <img
+                  alt=""
                   className="mt-3 mb-3"
                   loading="lazy"
                   src="./images/logo.svg"
