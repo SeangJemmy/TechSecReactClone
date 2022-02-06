@@ -45,10 +45,11 @@ function NavbarComp() {
         <ul className="navbar-nav mr-auto text-center mt-2 mt-lg-0">
           <li className="nav-item">
             <NavLink
+              to="/"
               activeClassName="active"
               className="nav-link"
               onClick={() => {
-                window.location.href = "./";
+                window.location.reload();
               }}
             >
               HOME
@@ -57,10 +58,11 @@ function NavbarComp() {
 
           <li className="nav-item">
             <NavLink
+              to="/product"
               activeClassName="active"
               className="nav-link"
               onClick={() => {
-                window.location.href = "/product";
+                window.location.reload();
               }}
             >
               PRODUCT
@@ -69,10 +71,11 @@ function NavbarComp() {
 
           <li className="nav-item">
             <NavLink
+              to="/forum"
               activeClassName="active"
               className="nav-link"
               onClick={() => {
-                window.location.href = "/forum";
+                window.location.reload();
               }}
             >
               FORUM
@@ -81,10 +84,11 @@ function NavbarComp() {
 
           <li className="nav-item">
             <NavLink
+              to="/login"
               activeClassName="active"
               className="nav-link"
               onClick={() => {
-                window.location.href = "/login";
+                window.location.reload();
               }}
             >
               LOGIN
@@ -108,58 +112,64 @@ function NavbarComp() {
               aria-labelledby="navbarDropdown"
             >
               <NavLink
+                to="/about"
                 activeClassName="active"
                 className="dropdown-item"
                 onClick={() => {
-                  window.location.href = "/about";
+                  window.location.reload();
                 }}
               >
                 About Us
               </NavLink>
 
               <NavLink
+                to="/contact"
                 activeClassName="active"
                 className="dropdown-item"
                 onClick={() => {
-                  window.location.href = "/contact";
+                  window.location.reload();
                 }}
               >
                 Contact Us
               </NavLink>
               <NavLink
+                to="/faq"
                 activeClassName="active"
                 className="dropdown-item"
                 onClick={() => {
-                  window.location.href = "/faq";
+                  window.location.reload();
                 }}
               >
                 FAQ
               </NavLink>
               <div className="dropdown-divider"></div>
               <NavLink
+                to="/pp"
                 activeClassName="active"
                 className="dropdown-item"
                 onClick={() => {
-                  window.location.href = "/pp";
+                  window.location.reload();
                 }}
               >
                 Privacy Policy
               </NavLink>
 
               <NavLink
+                to="/tos"
                 activeClassName="active"
                 className="dropdown-item"
                 onClick={() => {
-                  window.location.href = "/tos";
+                  window.location.reload();
                 }}
               >
                 Terms of Service
               </NavLink>
               <NavLink
+                to="/tracking"
                 activeClassName="active"
                 className="dropdown-item"
                 onClick={() => {
-                  window.location.href = "/tracking";
+                  window.location.reload();
                 }}
               >
                 Tracking
