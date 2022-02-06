@@ -19,12 +19,17 @@ function SubscribeComp() {
       alert("You need to enter a valid email address!");
     } else {
       fetch(subemailURL, { method: "POST", body: new FormData(subemailform) })
-        .then((response) => console.log("Success!", response))
-        .catch((error) => console.error("Error!", error.message));
-      alert(
-        `You have successfully subscribed to our newsletter using email:\n - ${subEm}\n\nThank you for joining our service!\n~ TecSec`
-      );
-      $("#subscribe-email").val("");
+        .then((response) => {
+          console.log("Success!", response);
+          alert(
+            `You have successfully subscribed to our newsletter using email:\n - ${subEm}\n\nThank you for joining our service!\n~ TecSec`
+          );
+          $("#subscribe-email").val("");
+        })
+        .catch((error) => {
+          console.error("Error!", error.message);
+          alert(`Error submitting your information! Try again later!`);
+        });
     }
   };
 

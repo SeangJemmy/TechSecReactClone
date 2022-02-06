@@ -13,11 +13,15 @@ function Contact() {
     );
 
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
-      .then((response) => console.log("Successfully submited!", response))
-      .catch((error) => console.error("Error!", error.message));
-    alert("Successfully submited your contact information!");
-
-    $("#techsec-form").trigger("reset");
+      .then((response) => {
+        console.log("Successfully submited!", response);
+        alert("Successfully submited your contact information!");
+        $("#techsec-form").trigger("reset");
+      })
+      .catch((error) => {
+        console.error("Error!", error.message);
+        alert("Error submitting your contact information!");
+      });
   };
 
   return (
