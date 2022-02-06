@@ -8,7 +8,7 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    $("#submit-date").val(
+    $("#submitdate").val(
       new Date().toLocaleString("en-US", { timeZone: "Asia/Jakarta" })
     );
 
@@ -28,7 +28,12 @@ function Contact() {
     <div className="container-fluid">
       <div className="row">
         <div className="col-12 col-sm-6 col-md-4 mx-auto text-center">
-          <form name="techsec-form" id="techsec-form" onSubmit={handleSubmit}>
+          <form
+            name="techsec-form"
+            id="techsec-form"
+            onSubmit={handleSubmit}
+            method="POST"
+          >
             <div>
               <h2 className="mt-4 mb-4">Contact Us</h2>
             </div>
@@ -95,15 +100,25 @@ function Contact() {
 
             <div className="checkbox mt-2 mb-1">
               <label>
-                <input type="checkbox" value="agree" required /> I'm not a
-                robot*
+                <input
+                  id="notrobot"
+                  name="notrobot"
+                  type="checkbox"
+                  value="agree"
+                  required
+                />{" "}
+                I'm not a robot*
               </label>
             </div>
-            <input name="submit-date" id="submit-date" className="d-none" />
+            <input name="submitdate" id="submitdate" className="d-none" />
             <div className="mt-1 mb-4">
-              <button type="submit" className="btn btn-lg btn-block btn-info">
-                Submit
-              </button>
+              <input
+                name="submitbtn"
+                id="submitbtn"
+                type="submit"
+                className="btn btn-lg btn-block btn-info"
+                value="Submit"
+              />
             </div>
           </form>
         </div>
