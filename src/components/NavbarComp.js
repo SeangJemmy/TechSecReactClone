@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import { BrowserRouter as NavLink } from "react-router-dom";
+import { BrowserRouter as Router, NavLink } from "react-router-dom";
 
 function NavbarComp() {
   return (
@@ -32,10 +32,11 @@ function NavbarComp() {
           <li className="nav-item">
             <NavLink
               to="/"
-              activeClassName="active"
-              className="nav-link"
+              className={({ isActive }) =>
+                isActive ? "active nav-link" : "nav-link"
+              }
               onClick={() => {
-                window.location.reload();
+                window.location.href = "/";
               }}
             >
               HOME
@@ -45,10 +46,11 @@ function NavbarComp() {
           <li className="nav-item">
             <NavLink
               to="/product"
-              activeClassName="active"
-              className="nav-link"
+              className={({ isActive }) =>
+                isActive ? "active nav-link" : "nav-link"
+              }
               onClick={() => {
-                window.location.reload();
+                window.location.href = "/product";
               }}
             >
               PRODUCT
@@ -58,10 +60,11 @@ function NavbarComp() {
           <li className="nav-item">
             <NavLink
               to="/forum"
-              activeClassName="active"
-              className="nav-link"
+              className={({ isActive }) =>
+                isActive ? "active nav-link" : "nav-link"
+              }
               onClick={() => {
-                window.location.reload();
+                window.location.href = "/forum";
               }}
             >
               FORUM
@@ -71,10 +74,11 @@ function NavbarComp() {
           <li className="nav-item">
             <NavLink
               to="/login"
-              activeClassName="active"
-              className="nav-link"
+              className={({ isActive }) =>
+                isActive ? "active nav-link" : "nav-link"
+              }
               onClick={() => {
-                window.location.reload();
+                window.location.href = "/login";
               }}
             >
               LOGIN
@@ -99,10 +103,11 @@ function NavbarComp() {
             >
               <NavLink
                 to="/about"
-                activeClassName="active"
-                className="dropdown-item"
+                className={({ isActive }) =>
+                  isActive ? "active dropdown-item" : "dropdown-item"
+                }
                 onClick={() => {
-                  window.location.reload();
+                  window.location.href = "/about";
                 }}
               >
                 About Us
@@ -110,20 +115,22 @@ function NavbarComp() {
 
               <NavLink
                 to="/contact"
-                activeClassName="active"
-                className="dropdown-item"
+                className={({ isActive }) =>
+                  isActive ? "active dropdown-item" : "dropdown-item"
+                }
                 onClick={() => {
-                  window.location.reload();
+                  window.location.href = "/contact";
                 }}
               >
                 Contact Us
               </NavLink>
               <NavLink
                 to="/faq"
-                activeClassName="active"
-                className="dropdown-item"
+                className={({ isActive }) =>
+                  isActive ? "active dropdown-item" : "dropdown-item"
+                }
                 onClick={() => {
-                  window.location.reload();
+                  window.location.href = "/faq";
                 }}
               >
                 FAQ
@@ -131,10 +138,11 @@ function NavbarComp() {
               <div className="dropdown-divider"></div>
               <NavLink
                 to="/pp"
-                activeClassName="active"
-                className="dropdown-item"
+                className={({ isActive }) =>
+                  isActive ? "active dropdown-item" : "dropdown-item"
+                }
                 onClick={() => {
-                  window.location.reload();
+                  window.location.href = "/pp";
                 }}
               >
                 Privacy Policy
@@ -142,20 +150,22 @@ function NavbarComp() {
 
               <NavLink
                 to="/tos"
-                activeClassName="active"
-                className="dropdown-item"
+                className={({ isActive }) =>
+                  isActive ? "active dropdown-item" : "dropdown-item"
+                }
                 onClick={() => {
-                  window.location.reload();
+                  window.location.href = "/tos";
                 }}
               >
                 Terms of Service
               </NavLink>
               <NavLink
                 to="/tracking"
-                activeClassName="active"
-                className="dropdown-item"
+                className={({ isActive }) =>
+                  isActive ? "active dropdown-item" : "dropdown-item"
+                }
                 onClick={() => {
-                  window.location.reload();
+                  window.location.href = "/tracking";
                 }}
               >
                 Tracking

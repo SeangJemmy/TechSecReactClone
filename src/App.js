@@ -7,7 +7,7 @@ import "./main";
 import Forum from "./pages/Forum";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Fpass from "./pages/fpass";
+import Fpass from "./pages/Fpass";
 import Faq from "./pages/Faq";
 import Pp from "./pages/Pp";
 import Tos from "./pages/Tos";
@@ -37,26 +37,23 @@ function App() {
   };
 
   return (
-    <>
-      <Router>
-        <NavbarComp />
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/forum" element={<Forum />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/fpass" element={<Fpass />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/pp" element={<Pp />} />
-          <Route path="/tos" element={<Tos />} />
-          <Route path="/tracking" element={<Tracking />} />
-        </Routes>
-        <FooterComp />
-      </Router>
-
+    <Router>
+      <NavbarComp />
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/forum" element={<Forum />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/fpass" element={<Fpass />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/pp" element={<Pp />} />
+        <Route path="/tos" element={<Tos />} />
+        <Route path="/tracking" element={<Tracking />} />
+      </Routes>
+      <FooterComp />
       {showButton && (
         <button onClick={scrollToTop} className="myBtn">
           <img
@@ -67,7 +64,7 @@ function App() {
           />
         </button>
       )}
-    </>
+    </Router>
   );
 }
 
