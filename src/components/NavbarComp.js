@@ -45,7 +45,6 @@ function NavbarComp() {
         <ul className="navbar-nav mr-auto text-center mt-2 mt-lg-0">
           <li className="nav-item">
             <NavLink
-              to="/"
               activeClassName="active"
               className="nav-link"
               onClick={() => {
@@ -58,7 +57,6 @@ function NavbarComp() {
 
           <li className="nav-item">
             <NavLink
-              to="/product"
               activeClassName="active"
               className="nav-link"
               onClick={() => {
@@ -71,7 +69,6 @@ function NavbarComp() {
 
           <li className="nav-item">
             <NavLink
-              to="/forum"
               activeClassName="active"
               className="nav-link"
               onClick={() => {
@@ -84,7 +81,6 @@ function NavbarComp() {
 
           <li className="nav-item">
             <NavLink
-              to="/login"
               activeClassName="active"
               className="nav-link"
               onClick={() => {
@@ -112,7 +108,6 @@ function NavbarComp() {
               aria-labelledby="navbarDropdown"
             >
               <NavLink
-                to="/about"
                 activeClassName="active"
                 className="dropdown-item"
                 onClick={() => {
@@ -123,7 +118,6 @@ function NavbarComp() {
               </NavLink>
 
               <NavLink
-                to="/contact"
                 activeClassName="active"
                 className="dropdown-item"
                 onClick={() => {
@@ -133,7 +127,6 @@ function NavbarComp() {
                 Contact Us
               </NavLink>
               <NavLink
-                to="/faq"
                 activeClassName="active"
                 className="dropdown-item"
                 onClick={() => {
@@ -144,7 +137,6 @@ function NavbarComp() {
               </NavLink>
               <div className="dropdown-divider"></div>
               <NavLink
-                to="/pp"
                 activeClassName="active"
                 className="dropdown-item"
                 onClick={() => {
@@ -155,7 +147,6 @@ function NavbarComp() {
               </NavLink>
 
               <NavLink
-                to="/tos"
                 activeClassName="active"
                 className="dropdown-item"
                 onClick={() => {
@@ -165,7 +156,6 @@ function NavbarComp() {
                 Terms of Service
               </NavLink>
               <NavLink
-                to="/tracking"
                 activeClassName="active"
                 className="dropdown-item"
                 onClick={() => {
