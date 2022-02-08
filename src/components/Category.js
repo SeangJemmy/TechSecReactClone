@@ -44,11 +44,9 @@ function Category() {
             placeholder="Enter product name"
             aria-label="Search"
           />
-          <input
-            className="btn btn-success col-2 my-2"
-            type="submit"
-            value="Search"
-          />
+          <button className="btn btn-success col-2 my-2" type="submit">
+            <i className="fa fa-search text-center"></i>
+          </button>
         </form>
       </div>
     </div>
