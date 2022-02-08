@@ -177,7 +177,7 @@ function NavbarComp() {
           <input
             className="form-control mr-sm-2"
             type="search"
-            placeholder="Search"
+            placeholder="Search on page"
             aria-label="Search"
           />
           <button

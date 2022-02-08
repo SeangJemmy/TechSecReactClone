@@ -15,6 +15,7 @@ import Tracking from "./pages/Tracking";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
 import { useEffect, useState } from "react";
+import Category from "./components/Category";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -43,7 +44,15 @@ function App() {
         <Route path="/" exact element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/product" element={<Product />} />
+        <Route
+          path="/product"
+          element={
+            <>
+              <Category />
+              <Product />
+            </>
+          }
+        />
         <Route path="/forum" element={<Forum />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
