@@ -1,0 +1,66 @@
+[
+  {
+    "product_id": "p1",
+    "product_name": "iPhone 13 Pro Max 128GB",
+    "product_category": "phone",
+    "product_price": "1599",
+    "product_discount_price": "1399",
+    "image": "../images/iphone/1.png"
+  },
+  {
+    "product_id": "p2",
+    "product_name": "iPhone 13 Pro Max 256GB",
+    "product_category": "phone",
+    "product_price": "1699",
+    "product_discount_price": "1499",
+    "image": "../images/iphone/2.png"
+  },
+  {
+    "product_id": "p3",
+    "product_name": "iPhone 13 Pro Max 128GB",
+    "product_category": "phone",
+    "product_price": "1599",
+    "product_discount_price": "1399",
+    "image": "../images/iphone/3.png"
+  },
+  {
+    "product_id": "p4",
+    "product_name": "iPhone 13 Pro Max 256GB",
+    "product_category": "phone",
+    "product_price": "1699",
+    "product_discount_price": "1499",
+    "image": "../images/iphone/4.png"
+  },
+  {
+    "product_id": "p5",
+    "product_name": "iPhone 13 Pro Max 128GB",
+    "product_category": "phone",
+    "product_price": "1599",
+    "product_discount_price": "1399",
+    "image": "../images/iphone/5.png"
+  },
+  {
+    "product_id": "p6",
+    "product_name": "iPhone 13 Pro Max 256GB",
+    "product_category": "phone",
+    "product_price": "1699",
+    "product_discount_price": "1499",
+    "image": "../images/iphone/6.png"
+  },
+  {
+    "product_id": "p7",
+    "product_name": "iPhone 13 Pro Max 128GB",
+    "product_category": "phone",
+    "product_price": "1599",
+    "product_discount_price": "1399",
+    "image": "../images/iphone/7.png"
+  },
+  {
+    "product_id": "p8",
+    "product_name": "iPhone 13 Pro Max 256GB",
+    "product_category": "phone",
+    "product_price": "1699",
+    "product_discount_price": "1499",
+    "image": "../images/iphone/8.png"
+  }
+]

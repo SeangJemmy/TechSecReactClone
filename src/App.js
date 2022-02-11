@@ -15,7 +15,7 @@ import Tracking from "./pages/Tracking";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
 import { useEffect, useState } from "react";
-import Category from "./components/Category";
+import AppleProduct from "./components/AppleProduct";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -48,7 +48,6 @@ function App() {
           path="/product"
           element={
             <>
-              <Category />
               <Product />
             </>
           }
@@ -83,7 +82,7 @@ const Home = () => (
     <h2 className="font-weight-bold text-center mt-4 mb-3">
       Apple iPhones On Sale
     </h2>
-    <Product />
+    <AppleProduct />
   </div>
 );
 

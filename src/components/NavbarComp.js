@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import { BrowserRouter as Router, NavLink } from "react-router-dom";
+import FindInPageIcon from "@mui/icons-material/FindInPage";
 
 function NavbarComp() {
   return (
