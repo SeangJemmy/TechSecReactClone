@@ -4,16 +4,21 @@ import ProductItemData from "../data/productitems.json";
 import SearchIcon from "@mui/icons-material/Search";
 
 function ProductItem() {
+  const [category_name, setCatName] = useState("Product");
   const [CatData, setCat] = useState(ProductItemData);
+  const [searchInp, setSearchInp] = useState("");
 
   const filterResult = (e) => {
-    if (e.target.value == "all") {
-      setCat(ProductItemData);
-    } else {
+    var catVal = e.target.value;
+    if (catVal != "all") {
       const result = ProductItemData.filter((curCat) => {
-        return curCat.product_category === e.target.value;
+        return curCat.product_category === catVal;
       });
       setCat(result);
+      setCatName(catVal);
+    } else {
+      setCatName("Product");
+      setCat(ProductItemData);
     }
   };
 
@@ -24,39 +29,44 @@ function ProductItem() {
           <form className="row m-0 p-0 justify-content-center mx-auto">
             <div className="m-0 p-0 col-11 col-md-2 col-lg-2">
               <select
-                className="m-0 btn btn-primary col-4 col-md-12 my-2"
+                className="searchCat form-control m-0 col-4 col-md-12 my-2 text-left mx-auto"
                 onChange={filterResult}
               >
-                <option className="text-left" value="all" defaultValue>
+                <option value="all" defaultValue>
                   All
                 </option>
-                <option className="text-left" value="phone">
-                  Phone
-                </option>
-                <option className="text-left" value="tablet">
-                  Tablet
-                </option>
-                <option className="text-left" value="charger">
-                  Charger
-                </option>
+                <option value="phone">Phone</option>
+                <option value="tablet">Tablet</option>
+                <option value="laptop">Laptop</option>
+                <option value="charger">Charger</option>
               </select>
             </div>
             <input
-              className="form-control col-9 col-md-7 my-2 mr-2 mx-md-2"
+              className="form-control col-11 col-md-7 my-2 mx-md-2"
               type="search"
-              placeholder="Enter product name"
+              onChange={(event) => {
+                setSearchInp(event.target.value);
+              }}
+              placeholder="Enter product name..."
               aria-label="Search"
             />
-            <button className="btn btn-success col-2 my-2" type="submit">
-              <SearchIcon className="d-flex mx-auto" />
-            </button>
           </form>
         </div>
-      </div>
-      <div className="m-3">
+        <h2 className="font-weight-bold text-center mt-4 text-capitalize">
+          Showing All Available {category_name}
+        </h2>
+        <hr className="product-hr" />
         <div className="container m-0 p-0 mx-auto">
           <div className="row mx-auto p-0 m-0 justify-content-center">
-            {CatData.map((post, index) => {
+            {CatData.filter((val) => {
+              if (searchInp == "") {
+                return val;
+              } else if (
+                val.product_name.toLowerCase().includes(searchInp.toLowerCase())
+              ) {
+                return val;
+              }
+            }).map((post, index) => {
               return (
                 <div className="col-12 col-md-3 p-2 m-0" key={post.product_id}>
                   <div className="card border border-secondary">

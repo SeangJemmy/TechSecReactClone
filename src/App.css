@@ -91,6 +91,10 @@ details li {
   padding-top: 10px;
 }
 
+.product-hr {
+  border-top: 1px solid rgba(0, 0, 0);
+}
+
 /* back to top */
 .myBtn {
   position: fixed; /* Fixed/sticky position */
@@ -212,6 +216,11 @@ footer h4 {
 
 hr.forum-hr {
   opacity: 0;
+}
+
+select.searchCat {
+  background-color: #007bff !important;
+  color: white !important;
 }
 
 @media only screen and (max-width: 767px) {
