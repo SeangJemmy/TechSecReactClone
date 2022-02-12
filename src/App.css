@@ -223,6 +223,17 @@ select.searchCat {
   color: white !important;
 }
 
+select.searchSort {
+  background-color: green !important;
+  color: white !important;
+}
+
+select.searchSort option,
+select.searchCat option {
+  background-color: white !important;
+  color: black !important;
+}
+
 @media only screen and (max-width: 767px) {
   .wrap-col {
     height: 100%;
