@@ -88,12 +88,12 @@ function ProductItem() {
         <form className="container m-0 p-0 justify-content-center mx-auto">
           <div className="row mx-auto justify-content-center my-2">
             <div className="col-12 col-md-6 mx-auto justify-content-center row my-1">
-              <label className="my-auto col-5 col-md-5 col-lg-3 h5 font-weight-bold text-left">
+              <label className="my-auto col-5 col-md-5 col-lg-3 h5 font-weight-bold text-left pl-0">
                 {" "}
                 Category:{" "}
               </label>
               <select
-                className="searchCat btn m-0 col-6 text-left"
+                className="searchCat btn m-0 col-5 text-left"
                 onChange={handleSelectCategory}
               >
                 <option value="all" defaultValue>
@@ -106,12 +106,12 @@ function ProductItem() {
               </select>
             </div>
             <div className="col-12 col-md-6 mx-auto justify-content-center row my-1">
-              <label className="my-auto col-5 col-md-3 col-lg-2 h5 font-weight-bold text-left">
+              <label className="my-auto col-5 col-md-3 col-lg-2 h5 font-weight-bold text-left pl-0">
                 {" "}
                 Sort:{" "}
               </label>
               <select
-                className="searchSort btn m-0 col-6 text-left"
+                className="searchSort btn m-0 col-5 text-left"
                 onChange={handleSelectSort}
               >
                 <option value="default" defaultValue>
