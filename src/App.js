@@ -1,4 +1,5 @@
 import "./App.css";
+import SetRouteTitle from "./components/SetRouteTitle";
 import NavbarComp from "./components/NavbarComp";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import FooterComp from "./components/FooterComp";
@@ -55,10 +56,10 @@ function App() {
         <Route path="/forum" element={<Forum />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/fpass" element={<Fpass />} />
+        <Route path="/forgotpassword" element={<Fpass />} />
         <Route path="/faq" element={<Faq />} />
-        <Route path="/pp" element={<Pp />} />
-        <Route path="/tos" element={<Tos />} />
+        <Route path="/privacypolicy" element={<Pp />} />
+        <Route path="/termsofservice" element={<Tos />} />
         <Route path="/tracking" element={<Tracking />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
@@ -77,38 +78,44 @@ function App() {
   );
 }
 
-const Home = () => (
-  <div className="m-3">
-    <h2 className="font-weight-bold text-center mt-4 mb-3">
-      Apple iPhones On Sale
-    </h2>
-    <AppleProduct />
-  </div>
-);
+const Home = () => {
+  SetRouteTitle("TechSec ~ We Got What You Need");
+  return (
+    <div className="m-3">
+      <h2 className="font-weight-bold text-center mt-4 mb-3">
+        Apple iPhones On Sale
+      </h2>
+      <AppleProduct />
+    </div>
+  );
+};
 
-const Error404 = () => (
-  <div className="m-3 row">
-    <a className="mx-auto mt-4" href="./">
-      <img
-        alt=""
-        className="img-fluid"
-        loading="lazy"
-        src="./images/error.png"
-      />
-    </a>
+const Error404 = () => {
+  SetRouteTitle("TechSec ~ Page Not Found");
+  return (
+    <div className="m-3 row">
+      <a className="mx-auto mt-4" href="./">
+        <img
+          alt=""
+          className="img-fluid"
+          loading="lazy"
+          src="./images/error.png"
+        />
+      </a>
 
-    <h1 className="col-12 font-weight-bold text-center my-4 text-danger">
-      Error 404 - Page Not Found
-    </h1>
-    <button
-      className="mb-4 d-flex btn btn-lg btn-primary mx-auto"
-      onClick={() => {
-        window.location.href = "./";
-      }}
-    >
-      Go to Home Page
-    </button>
-  </div>
-);
+      <h1 className="col-12 font-weight-bold text-center my-4 text-danger">
+        Error 404 - Page Not Found
+      </h1>
+      <button
+        className="mb-4 d-flex btn btn-lg btn-primary mx-auto"
+        onClick={() => {
+          window.location.href = "./";
+        }}
+      >
+        Go to Home Page
+      </button>
+    </div>
+  );
+};
 
 export default App;

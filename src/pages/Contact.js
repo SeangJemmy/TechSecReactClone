@@ -1,7 +1,10 @@
 import "../App.css";
 import $ from "jquery";
+import SetRouteTitle from "../components/SetRouteTitle";
 
 function Contact() {
+  SetRouteTitle("TechSec ~ Contact Us");
+
   const scriptURL =
     "https://script.google.com/macros/s/AKfycby75WYTTkujAfBz8-m6PewwIVClpquBQBzpZNJ7kFb3YfjhV8oZWS9LSgWWo4tOefTF/exec";
   const form = document.forms["techsec-form"];

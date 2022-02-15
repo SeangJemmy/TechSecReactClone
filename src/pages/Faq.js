@@ -1,6 +1,8 @@
 import "../App.css";
+import SetRouteTitle from "../components/SetRouteTitle";
 
 function Faq() {
+  SetRouteTitle("TechSec ~ FAQ");
   return (
     <div className="m-3">
       <div className="container">

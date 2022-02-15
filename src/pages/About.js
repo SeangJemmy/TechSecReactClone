@@ -1,6 +1,8 @@
 import "../App.css";
+import SetRouteTitle from "../components/SetRouteTitle";
 
 function About() {
+  SetRouteTitle("TechSec ~ About Us");
   return (
     <div className="m-3">
       <hr />

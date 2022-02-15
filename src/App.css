@@ -61,6 +61,10 @@ footer h4 {
   filter: drop-shadow(0 0 0.5rem rgb(252, 59, 0));
 }
 
+.search-nav:hover img {
+  filter: invert(100);
+}
+
 .aftership-poweredBy {
   display: none;
 }

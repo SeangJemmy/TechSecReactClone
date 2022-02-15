@@ -143,7 +143,7 @@ function NavbarComp() {
                   isActive ? "active dropdown-item" : "dropdown-item"
                 }
                 onClick={() => {
-                  window.location.href = "/pp";
+                  window.location.href = "/privacypolicy";
                 }}
               >
                 Privacy Policy
@@ -155,7 +155,7 @@ function NavbarComp() {
                   isActive ? "active dropdown-item" : "dropdown-item"
                 }
                 onClick={() => {
-                  window.location.href = "/tos";
+                  window.location.href = "/termsofservice";
                 }}
               >
                 Terms of Service
@@ -182,7 +182,7 @@ function NavbarComp() {
             aria-label="Search"
           />
           <button
-            className="btn btn-outline-success my-2 my-sm-0"
+            className="btn btn-outline-success my-2 my-sm-0 search-nav"
             type="submit"
           >
             <img loading="lazy" src="./mag.png" alt="" width="25" height="25" />

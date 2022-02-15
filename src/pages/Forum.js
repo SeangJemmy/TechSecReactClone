@@ -1,6 +1,8 @@
 import "../App.css";
+import SetRouteTitle from "../components/SetRouteTitle";
 
 function Forum() {
+  SetRouteTitle("TechSec ~ Forum");
   return (
     <div className="m-3">
       <div className="dropdown text-center create-forum-post container my-4">

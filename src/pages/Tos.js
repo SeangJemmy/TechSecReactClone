@@ -1,6 +1,8 @@
 import "../App.css";
+import SetRouteTitle from "../components/SetRouteTitle";
 
 function Tos() {
+  SetRouteTitle("TechSec ~ Terms of Service");
   return (
     <div className="m-4 mb-2">
       <h1 className="text-center">Terms Of Service</h1>

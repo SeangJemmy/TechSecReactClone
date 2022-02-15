@@ -1,6 +1,8 @@
 import "../App.css";
+import SetRouteTitle from "../components/SetRouteTitle";
 
 function Pp() {
+  SetRouteTitle("TechSec ~ Privacy Policy");
   return (
     <div className="m-4 mb-2">
       <h1 className="text-center">Privacy Policy</h1>

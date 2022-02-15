@@ -1,6 +1,8 @@
 import "../App.css";
+import SetRouteTitle from "../components/SetRouteTitle";
 
 function Login() {
+  SetRouteTitle("TechSec ~ Login");
   return (
     <div className="container-fluid">
       <div className="row">
@@ -55,7 +57,7 @@ function Login() {
               </button>
             </div>
             <div className="mt-1 mb-4">
-              <a href="/fpass">Forgot password?</a>
+              <a href="/forgotpassword">Forgot password?</a>
               <p>
                 Not a member? <a href="/signup">Sign up</a>
               </p>

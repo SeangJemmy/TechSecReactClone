@@ -1,6 +1,8 @@
 import "../App.css";
+import SetRouteTitle from "../components/SetRouteTitle";
 
 function Tracking() {
+  SetRouteTitle("TechSec ~ Track Product");
   (function (e, t, n) {
     var r,
       i = e.getElementsByTagName(t)[0];

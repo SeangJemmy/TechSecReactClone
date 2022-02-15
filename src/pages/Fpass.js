@@ -1,6 +1,8 @@
 import "../App.css";
+import SetRouteTitle from "../components/SetRouteTitle";
 
 function Fpass() {
+  SetRouteTitle("TechSec ~ Forgot Password");
   return (
     <div className="container-fluid">
       <div className="row">

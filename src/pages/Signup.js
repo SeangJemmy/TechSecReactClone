@@ -1,6 +1,8 @@
 import "../App.css";
+import SetRouteTitle from "../components/SetRouteTitle";
 
 function Signup() {
+  SetRouteTitle("TechSec ~ Sign Up");
   return (
     <div className="container-fluid">
       <div className="row">
@@ -108,8 +110,8 @@ function Signup() {
             <div className="checkbox mt-2 mb-3">
               <label>
                 <input type="checkbox" value="agree" required /> I agree to the
-                <a href="/tos">Terms of Service</a> &
-                <a href="/pp">Privacy Policy</a>.
+                <a href="/termsofservice">Terms of Service</a> &
+                <a href="/privacypolicy">Privacy Policy</a>.
               </label>
             </div>
             <div className="mt-1">
