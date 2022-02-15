@@ -1,9 +1,10 @@
-import { Verified } from "@mui/icons-material";
 import React, { useState, useEffect } from "react";
 import "../App.css";
-import ProductItemData from "../data/productitems.json";
+import axios from "axios";
 
 function ProductItem() {
+  const url = "https://seangjemmy.github.io/TechSecAPI/db.json";
+  const [ProductItemData, setPID] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [catName, setCatName] = useState("Product");
   const [list, setList] = useState(ProductItemData);
@@ -79,8 +80,14 @@ function ProductItem() {
   };
 
   useEffect(() => {
+    axios.get(url).then((res) => {
+      setPID(res.data.productitems);
+    });
+  }, []);
+
+  useEffect(() => {
     applyFilters();
-  }, [selectedCategory, selectedSort, searchInput]);
+  }, [ProductItemData, selectedCategory, selectedSort, searchInput]);
 
   return (
     <>

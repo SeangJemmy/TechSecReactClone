@@ -1,8 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
-import ProductItemData from "../data/productitems.json";
+import axios from "axios";
 
 function AppleProduct() {
+  const url = "https://seangjemmy.github.io/TechSecAPI/db.json";
+  const [ProductItemData, setPID] = useState([]);
+
+  useEffect(() => {
+    axios.get(url).then((res) => {
+      setPID(res.data.productitems);
+    });
+  }, []);
+
   return (
     <>
       <div className="m-3">

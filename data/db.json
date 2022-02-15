@@ -1,0 +1,76 @@
+{
+  "productitems": [
+    {
+      "product_id": "p1",
+      "product_name": "iPhone 13 Pro Max 128GB",
+      "product_category": "phone",
+      "product_price": "1599",
+      "product_discount_price": "1329",
+      "image": "../images/iphone/1.png",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p2",
+      "product_name": "iPhone 13 Pro Max 256GB",
+      "product_category": "phone",
+      "product_price": "1699",
+      "product_discount_price": "1449",
+      "image": "../images/iphone/2.png",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p3",
+      "product_name": "iPhone 13 Pro 128GB",
+      "product_category": "phone",
+      "product_price": "1499",
+      "product_discount_price": "1229",
+      "image": "../images/iphone/3.png",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p4",
+      "product_name": "iPhone 13 Pro 256GB",
+      "product_category": "phone",
+      "product_price": "1559",
+      "product_discount_price": "1359",
+      "image": "../images/iphone/4.png",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p5",
+      "product_name": "iPhone 13 128GB",
+      "product_category": "phone",
+      "product_price": "1199",
+      "product_discount_price": "949",
+      "image": "../images/iphone/5.png",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p6",
+      "product_name": "iPhone 13 256GB",
+      "product_category": "phone",
+      "product_price": "1299",
+      "product_discount_price": "1079",
+      "image": "../images/iphone/6.png",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p7",
+      "product_name": "iPhone 13 MiNi 128GB",
+      "product_category": "phone",
+      "product_price": "1099",
+      "product_discount_price": "849",
+      "image": "../images/iphone/7.png",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p8",
+      "product_name": "iPhone 13 MiNi 256GB",
+      "product_category": "phone",
+      "product_price": "1149",
+      "product_discount_price": "969",
+      "image": "../images/iphone/8.png",
+      "product_verified": "true"
+    }
+  ]
+}
