@@ -138,7 +138,7 @@ function NavbarComp() {
               </NavLink>
               <div className="dropdown-divider"></div>
               <NavLink
-                to="/pp"
+                to="/privacypolicy"
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
                 }
@@ -150,7 +150,7 @@ function NavbarComp() {
               </NavLink>
 
               <NavLink
-                to="/tos"
+                to="/termsofservice"
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
                 }
