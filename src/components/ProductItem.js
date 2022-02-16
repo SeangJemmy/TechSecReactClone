@@ -157,6 +157,7 @@ function ProductItem() {
                       className="card-img-top border-secondary border-bottom"
                       src={item.image}
                       alt=""
+                      loading="lazy"
                     />
                     <div className="card-body">
                       <h6 className="font-weight-bold card-title text-center">
