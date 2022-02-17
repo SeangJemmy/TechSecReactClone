@@ -1,12 +1,24 @@
 import "../App.css";
 import $ from "jquery";
 import SetRouteTitle from "../components/SetRouteTitle";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Contact() {
   SetRouteTitle("TechSec ~ Contact Us");
 
   const [pvalue, setPValue] = useState("guest");
+  const [resetstate, setResetstate] = useState(0);
+
+  const handlePValue = (event) => setPValue(event.target.value);
+
+  const resetPValue = () => {
+    setPValue("guest");
+  };
+
+  useEffect(() => {
+    setResetstate(0);
+    resetPValue();
+  }, [resetstate]);
 
   const scriptURL =
     "https://script.google.com/macros/s/AKfycbycquZa6k1H3NoqsgmqXWv0PljHtVWyzG_63_ST4TEElzb6YPI2rJuHn6EmkRk9pnWP/exec";
@@ -23,11 +35,11 @@ function Contact() {
         console.log("Successfully submited!", response);
         alert("Successfully submited your contact information!");
         $("#techsec-form").trigger("reset");
-        setPValue("guest");
+        setResetstate(1);
       })
       .catch((error) => {
         console.error("Error!", error.message);
-        alert("Error submitting your contact information!");
+        alert("There was an error submitting your contact information!");
       });
   };
 
@@ -78,7 +90,7 @@ function Contact() {
               className="form-control mb-1"
               id="preference"
               required
-              onChange={(event) => setPValue(event.target.value)}
+              onChange={handlePValue}
               value={pvalue}
             >
               <option value="customer">Customer</option>
