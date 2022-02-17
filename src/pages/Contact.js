@@ -6,19 +6,8 @@ import { useState, useEffect } from "react";
 function Contact() {
   SetRouteTitle("TechSec ~ Contact Us");
 
-  const [pvalue, setPValue] = useState("guest");
-  const [resetstate, setResetstate] = useState(0);
-
+  const [pvalue, setPValue] = useState("");
   const handlePValue = (event) => setPValue(event.target.value);
-
-  const resetPValue = () => {
-    setPValue("guest");
-  };
-
-  useEffect(() => {
-    setResetstate(0);
-    resetPValue();
-  }, [resetstate]);
 
   const scriptURL =
     "https://script.google.com/macros/s/AKfycbycquZa6k1H3NoqsgmqXWv0PljHtVWyzG_63_ST4TEElzb6YPI2rJuHn6EmkRk9pnWP/exec";
@@ -35,7 +24,6 @@ function Contact() {
         console.log("Successfully submited!", response);
         alert("Successfully submited your contact information!");
         $("#techsec-form").trigger("reset");
-        setResetstate(1);
       })
       .catch((error) => {
         console.error("Error!", error.message);
@@ -91,10 +79,12 @@ function Contact() {
               id="preference"
               onChange={handlePValue}
               value={pvalue}
+              required
             >
+              <option value="">Select Your Preference</option>
+              <option value="guest">Guest</option>
               <option value="customer">Customer</option>
               <option value="supplier">Supplier</option>
-              <option value="guest">Guest</option>
             </select>
 
             <textarea
