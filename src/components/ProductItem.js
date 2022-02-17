@@ -43,7 +43,6 @@ function ProductItem() {
         );
         setBrandName(selectedBrand);
       } else {
-        updatedList = ProductItemData;
         setBrandName("All");
       }
     }
