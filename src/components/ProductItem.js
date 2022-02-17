@@ -134,7 +134,7 @@ function ProductItem() {
                 <option value="phone">Phone</option>
                 <option value="tablet">Tablet</option>
                 <option value="laptop">Laptop</option>
-                <option value="charger">Charger</option>
+                <option value="accessories">Accessories</option>
               </select>
             </div>
 
@@ -153,6 +153,10 @@ function ProductItem() {
                 <option value="apple">Apple</option>
                 <option value="samsung">Samsung</option>
                 <option value="huawei">Huawei</option>
+                <option value="microsoft">Microsoft</option>
+                <option value="dell">Dell</option>
+                <option value="sony">Sony</option>
+                <option value="hp">HP</option>
               </select>
             </div>
 
