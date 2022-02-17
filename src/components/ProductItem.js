@@ -127,10 +127,9 @@ function ProductItem() {
               <select
                 className="searchCat btn m-0 col-5 col-lg- text-left"
                 onChange={handleSelectCategory}
+                value={selectedCategory}
               >
-                <option value="all" defaultValue>
-                  All
-                </option>
+                <option value="all">All</option>
                 <option value="phone">Phone</option>
                 <option value="tablet">Tablet</option>
                 <option value="laptop">Laptop</option>
@@ -146,10 +145,9 @@ function ProductItem() {
               <select
                 className="searchBrand btn m-0 col-5 col-lg- text-left"
                 onChange={handleSelectBrand}
+                value={selectedBrand}
               >
-                <option value="all" defaultValue>
-                  All
-                </option>
+                <option value="all">All</option>
                 <option value="apple">Apple</option>
                 <option value="samsung">Samsung</option>
                 <option value="huawei">Huawei</option>
@@ -168,10 +166,9 @@ function ProductItem() {
               <select
                 className="searchSort btn m-0 col-5 col-lg- text-left"
                 onChange={handleSelectSort}
+                value={selectedSort}
               >
-                <option value="default" defaultValue>
-                  Default
-                </option>
+                <option value="default">Default</option>
                 <option value="recent">Recent</option>
                 <option value="asc">Ascending</option>
                 <option value="desc">Descending</option>
