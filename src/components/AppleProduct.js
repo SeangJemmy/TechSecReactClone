@@ -5,6 +5,8 @@ import axios from "axios";
 function AppleProduct() {
   const url = "https://seangjemmy.github.io/TechSecAPI/db.json";
   const [ProductItemData, setPID] = useState([]);
+  const selectedBrand = "apple";
+  const selectedCategory = "phone";
 
   useEffect(() => {
     axios.get(url).then((res) => {
@@ -17,7 +19,12 @@ function AppleProduct() {
       <div className="m-3">
         <div className="container m-0 p-0 mx-auto">
           <div className="row mx-auto p-0 m-0 justify-content-center">
-            {ProductItemData.map((post, index) => {
+            {ProductItemData.filter((item) => {
+              return (
+                item.product_category === selectedCategory &&
+                item.product_brand === selectedBrand
+              );
+            }).map((post, index) => {
               return (
                 <div className="col-12 col-md-3 p-2 m-0" key={post.product_id}>
                   <div className="card border border-secondary">

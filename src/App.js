@@ -81,7 +81,7 @@ function App() {
 const Home = () => {
   SetRouteTitle("TechSec ~ We Got What You Need");
   return (
-    <div className="m-3">
+    <div>
       <h2 className="font-weight-bold text-center mt-4 mb-3">
         Apple iPhones On Sale
       </h2>

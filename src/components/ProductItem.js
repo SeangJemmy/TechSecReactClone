@@ -49,6 +49,11 @@ function ProductItem() {
           a.product_id > b.product_id ? 1 : -1
         );
       }
+      if (selectedSort == "recent") {
+        updatedList = updatedList.sort((a, b) =>
+          a.product_id < b.product_id ? 1 : -1
+        );
+      }
       if (selectedSort == "high") {
         updatedList = updatedList.sort(
           (a, b) => b.product_discount_price - a.product_discount_price
@@ -124,6 +129,7 @@ function ProductItem() {
                 <option value="default" defaultValue>
                   Default
                 </option>
+                <option value="recent">Recent</option>
                 <option value="asc">Ascending</option>
                 <option value="desc">Descending</option>
                 <option value="high">Highest</option>
