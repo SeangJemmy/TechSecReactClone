@@ -30,7 +30,6 @@ function ProductItem() {
         );
         setCatName(selectedCategory);
       } else {
-        updatedList = ProductItemData;
         setCatName("Product");
       }
     }
