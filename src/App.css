@@ -33,6 +33,10 @@ footer h4 {
   padding: 5px;
 }
 
+.navbar ul li a {
+  color: #000 !important;
+}
+
 .navbar ul li a:hover,
 .navbar .active a,
 .navbar a.active {
