@@ -232,8 +232,14 @@ select.searchSort {
   color: white !important;
 }
 
+select.searchBrand {
+  background-color: rgb(255, 94, 0) !important;
+  color: white !important;
+}
+
 select.searchSort option,
-select.searchCat option {
+select.searchCat option,
+select.searchBrand option {
   background-color: white !important;
   color: black !important;
 }

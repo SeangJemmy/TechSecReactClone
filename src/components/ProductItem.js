@@ -6,7 +6,9 @@ function ProductItem() {
   const url = "https://seangjemmy.github.io/TechSecAPI/db.json";
   const [ProductItemData, setPID] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedBrand, setSelectedBrand] = useState("all");
   const [catName, setCatName] = useState("Product");
+  const [brandName, setBrandName] = useState("All");
   const [list, setList] = useState(ProductItemData);
   const [selectedSort, setSelectedSort] = useState("default");
   const [searchInput, setSearchInput] = useState("");
@@ -15,6 +17,7 @@ function ProductItem() {
     setSelectedCategory(event.target.value);
 
   const handleSelectSort = (event) => setSelectedSort(event.target.value);
+  const handleSelectBrand = (event) => setSelectedBrand(event.target.value);
 
   const applyFilters = () => {
     let updatedList = ProductItemData;
@@ -29,6 +32,19 @@ function ProductItem() {
       } else {
         updatedList = ProductItemData;
         setCatName("Product");
+      }
+    }
+
+    // Brand Filter
+    if (selectedBrand) {
+      if (selectedBrand != "all") {
+        updatedList = updatedList.filter(
+          (item) => item.product_brand === selectedBrand
+        );
+        setBrandName(selectedBrand);
+      } else {
+        updatedList = ProductItemData;
+        setBrandName("All");
       }
     }
 
@@ -92,20 +108,26 @@ function ProductItem() {
 
   useEffect(() => {
     applyFilters();
-  }, [ProductItemData, selectedCategory, selectedSort, searchInput]);
+  }, [
+    ProductItemData,
+    selectedCategory,
+    selectedBrand,
+    selectedSort,
+    searchInput,
+  ]);
 
   return (
     <>
       <div className="p-0 m-3">
         <form className="container m-0 p-0 justify-content-center mx-auto">
           <div className="row mx-auto justify-content-center my-2">
-            <div className="col-12 col-md-6 mx-auto justify-content-center row my-1">
-              <label className="my-auto col-5 col-md-5 col-lg-3 h5 font-weight-bold text-left pl-0">
+            <div className="col-12 col-lg-4 mx-auto justify-content-center row my-1">
+              <label className="my-auto col-5 col-lg- h5 font-weight-bold text-left pl-0 text-lg-center">
                 {" "}
                 Category:{" "}
               </label>
               <select
-                className="searchCat btn m-0 col-5 text-left"
+                className="searchCat btn m-0 col-5 col-lg- text-left"
                 onChange={handleSelectCategory}
               >
                 <option value="all" defaultValue>
@@ -117,13 +139,32 @@ function ProductItem() {
                 <option value="charger">Charger</option>
               </select>
             </div>
-            <div className="col-12 col-md-6 mx-auto justify-content-center row my-1">
-              <label className="my-auto col-5 col-md-3 col-lg-2 h5 font-weight-bold text-left pl-0">
+
+            <div className="col-12 col-lg-4 mx-auto justify-content-center row my-1">
+              <label className="my-auto col-5 col-lg- h5 font-weight-bold text-left pl-0 text-lg-center">
+                {" "}
+                Brand:{" "}
+              </label>
+              <select
+                className="searchBrand btn m-0 col-5 col-lg- text-left"
+                onChange={handleSelectBrand}
+              >
+                <option value="all" defaultValue>
+                  All
+                </option>
+                <option value="apple">Apple</option>
+                <option value="samsung">Samsung</option>
+                <option value="huawei">Huawei</option>
+              </select>
+            </div>
+
+            <div className="col-12 col-lg-4 mx-auto justify-content-center row my-1">
+              <label className="my-auto col-5 col-lg- h5 font-weight-bold text-left pl-0 text-lg-center">
                 {" "}
                 Sort:{" "}
               </label>
               <select
-                className="searchSort btn m-0 col-5 text-left"
+                className="searchSort btn m-0 col-5 col-lg- text-left"
                 onChange={handleSelectSort}
               >
                 <option value="default" defaultValue>
@@ -150,7 +191,7 @@ function ProductItem() {
         </form>
 
         <h2 className="font-weight-bold text-center mt-4 text-capitalize">
-          Showing All Available {catName}
+          Showing {brandName} Available {catName}
         </h2>
         <hr className="product-hr" />
         <div className="container m-0 p-0 mx-auto">
