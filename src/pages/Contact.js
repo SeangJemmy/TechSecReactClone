@@ -89,7 +89,6 @@ function Contact() {
               name="Preference"
               className="form-control mb-1"
               id="preference"
-              required
               onChange={handlePValue}
               value={pvalue}
             >
