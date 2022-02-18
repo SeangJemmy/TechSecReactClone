@@ -6,7 +6,7 @@ const thisYear = new Date().getFullYear();
 
 function FooterComp() {
   return (
-    <footer className="text-center">
+    <footer className="text-center pb-4">
       <section className="reason-to-buy">
         <h2>
           <span> GREAT REASONS TO USE OUR SERVICE </span>
