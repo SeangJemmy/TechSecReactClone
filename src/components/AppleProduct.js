@@ -33,6 +33,7 @@ function AppleProduct() {
                       src={post.image}
                       alt=""
                       width="100%"
+                      height="100%"
                     />
                     <div className="card-body">
                       <div className="h6 font-weight-bold card-title text-center">
@@ -49,8 +50,8 @@ function AppleProduct() {
                           href="#"
                           className="btn btn-warning btn-sm mx-1 my-1"
                         >
-                          <i className="fa fa-shopping-cart mr-2"></i>Add to
-                          Cart
+                          <i className="fa fa-shopping-cart mr-2" alt=""></i>Add
+                          to Cart
                         </a>
                         <a
                           href="#"

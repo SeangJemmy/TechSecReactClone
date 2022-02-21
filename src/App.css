@@ -1,6 +1,5 @@
 /* main template features */
-body,
-i {
+.fa {
   font-display: swap !important;
 }
 

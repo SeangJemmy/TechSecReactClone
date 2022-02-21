@@ -205,6 +205,7 @@ function ProductItem() {
                       alt=""
                       loading="lazy"
                       width="100%"
+                      height="100%"
                     />
                     <div className="card-body">
                       <div className="h6 font-weight-bold card-title text-center">

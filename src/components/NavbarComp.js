@@ -1,7 +1,6 @@
 import React from "react";
 import "../App.css";
 import { BrowserRouter as Router, NavLink } from "react-router-dom";
-import FindInPageIcon from "@mui/icons-material/FindInPage";
 
 function NavbarComp() {
   return (
@@ -24,6 +23,7 @@ function NavbarComp() {
           src="./logo.svg"
           alt=""
           height="50"
+          width="100%"
           className="d-inline-block logo"
         />
       </a>
