@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
-import axios from "axios";
+import api from "../api/axios";
 
 function AppleProduct() {
-  const url = "https://seangjemmy.github.io/TechSecAPI/db.json";
   const [ProductItemData, setPID] = useState([]);
   const selectedBrand = "apple";
   const selectedCategory = "phone";
 
   useEffect(() => {
-    axios.get(url).then((res) => {
+    api.get(`db.json`).then((res) => {
       setPID(res.data.productitems);
     });
   }, []);

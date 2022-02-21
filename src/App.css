@@ -49,7 +49,7 @@ footer a:hover {
 .navbar ul li a:hover,
 .navbar .active a,
 .navbar a.active {
-  color: #007bff !important;
+  color: blue !important;
 }
 
 .navbar a.dropdown-item,
@@ -62,7 +62,7 @@ footer a:hover {
 .navbar a.dropdown-item:hover,
 .navbar .dropdown a.active,
 .create-forum-post a.dropdown-item:hover {
-  background: #007bff !important;
+  background: blue !important;
   color: rgb(245, 245, 245) !important;
 }
 

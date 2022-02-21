@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
-import axios from "axios";
+import api from "../api/axios";
 
 function ProductItem() {
-  const url = "https://seangjemmy.github.io/TechSecAPI/db.json";
   const [ProductItemData, setPID] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedBrand, setSelectedBrand] = useState("all");
@@ -99,7 +98,7 @@ function ProductItem() {
   };
 
   useEffect(() => {
-    axios.get(url).then((res) => {
+    api.get(`db.json`).then((res) => {
       setPID(res.data.productitems);
     });
   }, []);

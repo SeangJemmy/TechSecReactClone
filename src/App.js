@@ -69,8 +69,10 @@ function App() {
           <img
             className="UpArrow_style"
             alt=""
+            loading="lazy"
             src="images/Up-Arrow.svg"
             width="30"
+            height="54"
           />
         </button>
       )}
@@ -100,6 +102,8 @@ const Error404 = () => {
           className="img-fluid"
           loading="lazy"
           src="./images/error.png"
+          width="100%"
+          height="100%"
         />
       </a>
 
