@@ -204,17 +204,18 @@ function ProductItem() {
                       src={item.image}
                       alt=""
                       loading="lazy"
+                      width="100%"
                     />
                     <div className="card-body">
-                      <h6 className="font-weight-bold card-title text-center">
+                      <div className="h6 font-weight-bold card-title text-center">
                         {item.product_name}
-                      </h6>
-                      <h4 className="font-weight-bold card-title text-center text-danger">
+                      </div>
+                      <div className="h4 font-weight-bold card-title text-center text-danger">
                         <small>
                           <del>${item.product_price}</del>
                         </small>{" "}
                         ${item.product_discount_price}
-                      </h4>
+                      </div>
                       <div className="text-center">
                         <a
                           href="#"

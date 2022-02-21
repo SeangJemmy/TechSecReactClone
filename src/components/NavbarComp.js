@@ -18,7 +18,7 @@ function NavbarComp() {
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <a className="navbar-brand" href="./">
+      <a className="navbar-brand" href="./" aria-label="Back to Main Page">
         <img
           loading="lazy"
           src="./logo.svg"

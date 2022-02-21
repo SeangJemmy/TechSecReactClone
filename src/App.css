@@ -1,4 +1,9 @@
 /* main template features */
+body,
+i {
+  font-display: swap !important;
+}
+
 html,
 .navbar,
 .dropdown-menu {
@@ -27,6 +32,11 @@ footer {
 footer h4 {
   text-transform: uppercase;
   font-weight: 700;
+}
+
+footer a,
+footer a:hover {
+  color: blue;
 }
 
 .sjcon {
@@ -167,6 +177,7 @@ footer h4 {
 
 .reason-to-buy-wrapper .grid__cell img {
   height: 60px;
+  width: 60px;
   margin-right: 10px;
 }
 
@@ -184,11 +195,6 @@ footer h4 {
 @media screen and (max-width: 800px) {
   .reason-to-buy-wrapper .grid__cell {
     margin-bottom: 10px;
-  }
-}
-@media screen and (max-width: 800px) {
-  .reason-to-buy-wrapper .grid__cell img {
-    width: 60px;
   }
 }
 @media screen and (max-width: 800px) {

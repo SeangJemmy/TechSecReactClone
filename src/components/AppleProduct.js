@@ -32,17 +32,18 @@ function AppleProduct() {
                       className="card-img-top border-secondary border-bottom"
                       src={post.image}
                       alt=""
+                      width="100%"
                     />
                     <div className="card-body">
-                      <h6 className="font-weight-bold card-title text-center">
+                      <div className="h6 font-weight-bold card-title text-center">
                         {post.product_name}
-                      </h6>
-                      <h4 className="font-weight-bold card-title text-center text-danger">
+                      </div>
+                      <div className="h4 font-weight-bold card-title text-center text-danger">
                         <small>
                           <del>${post.product_price}</del>
                         </small>{" "}
                         ${post.product_discount_price}
-                      </h4>
+                      </div>
                       <div className="text-center">
                         <a
                           href="#"

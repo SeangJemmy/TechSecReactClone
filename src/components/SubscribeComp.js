@@ -50,9 +50,11 @@ function SubscribeComp() {
             aria-label="Email"
           />
           <button
+            name="subscribe-email-button"
             className="btn btn-warning col-2 col-md-1 col-lg-1 ml-1"
             type="submit"
             id="subscribeEmail"
+            aria-label="Submit"
           >
             <img alt="" src="./images/arrow-filled.png" width="15px" />
           </button>

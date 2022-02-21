@@ -15,7 +15,13 @@ function FooterComp() {
         <div className="reason-to-buy-wrapper">
           <div className="reason-to-buy-inner grid">
             <div className="grid__cell pr-5 mr-10">
-              <img alt="" src="./images/customer-satisfaction_1.png" />
+              <img
+                alt=""
+                src="./images/customer-satisfaction_1.png"
+                loading="lazy"
+                width="60px"
+                height="60px"
+              />
               <div>
                 <h3>Satisfaction Guarantee</h3>
                 <p>
@@ -26,7 +32,13 @@ function FooterComp() {
             </div>
 
             <div className="grid__cell pr-5 mr-10">
-              <img alt="" src="./images/safety.png" />
+              <img
+                alt=""
+                src="./images/safety.png"
+                loading="lazy"
+                width="60px"
+                height="60px"
+              />
               <div>
                 <h3>Verified & Trusted</h3>
                 We verify each product details and prices professionally to
@@ -35,7 +47,13 @@ function FooterComp() {
             </div>
 
             <div className="grid__cell pr-5 mr-10">
-              <img alt="" src="./images/sale.png" />
+              <img
+                alt=""
+                src="./images/sale.png"
+                loading="lazy"
+                width="60px"
+                height="60px"
+              />
               <div>
                 <h3>Great Value</h3>
                 <p>
@@ -46,7 +64,13 @@ function FooterComp() {
             </div>
 
             <div className="grid__cell pr-5 mr-10">
-              <img alt="" src="./images/world.png" />
+              <img
+                alt=""
+                src="./images/world.png"
+                loading="lazy"
+                width="60px"
+                height="60px"
+              />
               <div>
                 <h3>Local Optimization</h3>
                 <p>
