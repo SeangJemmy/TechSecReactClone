@@ -8,7 +8,6 @@ const instance = axios.create({
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
-    "Cache-Header": "max-age=360000",
   },
 });
 
