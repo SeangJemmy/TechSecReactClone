@@ -73,6 +73,7 @@ function App() {
             src="images/Up-Arrow.svg"
             width="30"
             height="54"
+            aria-label="Click to Top"
           />
         </button>
       )}

@@ -97,16 +97,16 @@ function ProductItem() {
     setList(updatedList);
   };
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const res = await api.get(`db.json`);
-        setPID(res.data.productitems);
-        return res;
-      } catch (error) {
-        console.log(error);
-      }
+  async function fetchData() {
+    try {
+      const res = await api.get(``);
+      setPID(res.data.productitems);
+    } catch (error) {
+      console.log(error);
     }
+  }
+
+  useEffect(() => {
     fetchData();
   }, []);
 
@@ -198,7 +198,9 @@ function ProductItem() {
         <h2 className="font-weight-bold text-center mt-4 text-capitalize">
           Showing {brandName} Available {catName}
         </h2>
+
         <hr className="product-hr" />
+
         <div className="container m-0 p-0 mx-auto">
           <div className="row mx-auto p-0 m-0 justify-content-center">
             {list.map((item, index) => {

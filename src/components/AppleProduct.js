@@ -7,16 +7,16 @@ function AppleProduct() {
   const selectedBrand = "apple";
   const selectedCategory = "phone";
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const res = await api.get(`db.json`);
-        setPID(res.data.productitems);
-        return res;
-      } catch (error) {
-        console.log(error);
-      }
+  async function fetchData() {
+    try {
+      const res = await api.get(``);
+      setPID(res.data.productitems);
+    } catch (error) {
+      console.log(error);
     }
+  }
+
+  useEffect(() => {
     fetchData();
   }, []);
 
@@ -25,7 +25,7 @@ function AppleProduct() {
       <div className="m-3">
         <div className="container m-0 p-0 mx-auto">
           <div className="row mx-auto p-0 m-0 justify-content-center">
-            {ProductItemData.filter((item) => {
+            {ProductItemData?.filter((item) => {
               return (
                 item.product_category === selectedCategory &&
                 item.product_brand === selectedBrand
