@@ -184,7 +184,7 @@ function NavbarComp() {
           <button
             className="btn btn-outline-success my-2 my-sm-0 search-nav"
             type="submit"
-            name="pagesearch"
+            aria-label="pagesearch"
           >
             <img loading="lazy" src="./mag.png" alt="" width="25" height="25" />
           </button>

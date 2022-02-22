@@ -98,9 +98,16 @@ function ProductItem() {
   };
 
   useEffect(() => {
-    api.get(`db.json`).then((res) => {
-      setPID(res.data.productitems);
-    });
+    async function fetchData() {
+      try {
+        const res = await api.get(`db.json`);
+        setPID(res.data.productitems);
+        return res;
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchData();
   }, []);
 
   useEffect(() => {
