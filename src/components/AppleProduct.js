@@ -1,31 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import "../App.css";
-import api from "../api/axios";
+// import api from "../api/axios";
 import ProductItemMap from "./ProductItemMap";
+import { ListContext } from "../contexts/ProductItemsContext";
 
 function AppleProduct() {
-  const [ProductItemData, setPID] = useState([]);
+  const { productData } = useContext(ListContext);
   const selectedBrand = "apple";
   const selectedCategory = "phone";
-
-  async function fetchData() {
-    try {
-      const res = await api.get(``);
-      setPID(res.data.productitems);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
     <>
       <div className="m-3">
         <ProductItemMap
-          data={ProductItemData?.filter((item) => {
+          data={productData?.filter((item) => {
             return (
               item.product_category === selectedCategory &&
               item.product_brand === selectedBrand

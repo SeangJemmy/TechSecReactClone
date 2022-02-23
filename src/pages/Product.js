@@ -1,30 +1,17 @@
 import "../App.css";
 import FilterMenu from "../components/FilterMenu";
 import SetRouteTitle from "../components/SetRouteTitle";
-import api from "../api/axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
+import { ListContext } from "../contexts/ProductItemsContext";
 
 function Product() {
   SetRouteTitle("TechSec ~ Products");
 
-  const [ProductItemData, setPID] = useState([]);
-
-  async function fetchData() {
-    try {
-      const res = await api.get(``);
-      setPID(res.data.productitems);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const { productData } = useContext(ListContext);
 
   return (
     <div className="m-3">
-      <FilterMenu data={ProductItemData} />
+      <FilterMenu data={productData} />
     </div>
   );
 }

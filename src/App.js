@@ -17,6 +17,7 @@ import Contact from "./pages/Contact";
 import Product from "./pages/Product";
 import { useEffect, useState } from "react";
 import AppleProduct from "./components/AppleProduct";
+import { ListContextProvider } from "./contexts/ProductItemsContext";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -41,22 +42,23 @@ function App() {
   return (
     <Router>
       <NavbarComp />
-
-      <Routes>
-        <Route path="/" exact element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/forum" element={<Forum />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/forgotpassword" element={<Fpass />} />
-        <Route path="/faq" element={<Faq />} />
-        <Route path="/privacypolicy" element={<Pp />} />
-        <Route path="/termsofservice" element={<Tos />} />
-        <Route path="/tracking" element={<Tracking />} />
-        <Route path="*" element={<Error404 />} />
-      </Routes>
+      <ListContextProvider>
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/forum" element={<Forum />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/forgotpassword" element={<Fpass />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/privacypolicy" element={<Pp />} />
+          <Route path="/termsofservice" element={<Tos />} />
+          <Route path="/tracking" element={<Tracking />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </ListContextProvider>
       <FooterComp />
       {showButton && (
         <button onClick={scrollToTop} className="myBtn">
