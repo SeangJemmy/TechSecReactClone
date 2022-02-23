@@ -80,7 +80,7 @@ const Home = () => {
     <div>
       <div className="container m-0 p-0 mx-auto">
         <img
-          className="image-fluid"
+          className="image-fluid p-0 m-0"
           alt=""
           width="100%"
           height="100%"
