@@ -42,23 +42,30 @@ function App() {
   return (
     <Router>
       <NavbarComp />
-      <ListContextProvider>
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/forum" element={<Forum />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/forgotpassword" element={<Fpass />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/privacypolicy" element={<Pp />} />
-          <Route path="/termsofservice" element={<Tos />} />
-          <Route path="/tracking" element={<Tracking />} />
-          <Route path="*" element={<Error404 />} />
-        </Routes>
-      </ListContextProvider>
+
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route
+          path="/product"
+          element={
+            <ListContextProvider>
+              <Product />
+            </ListContextProvider>
+          }
+        />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/forum" element={<Forum />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/forgotpassword" element={<Fpass />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/privacypolicy" element={<Pp />} />
+        <Route path="/termsofservice" element={<Tos />} />
+        <Route path="/tracking" element={<Tracking />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
+
       <FooterComp />
       {showButton && (
         <button onClick={scrollToTop} className="myBtn">
@@ -93,7 +100,9 @@ const Home = () => {
       <h2 className="font-weight-bold text-center mt-4 mb-3">
         Apple iPhones On Sale
       </h2>
-      <AppleProduct />
+      <ListContextProvider>
+        <AppleProduct />
+      </ListContextProvider>
     </div>
   );
 };

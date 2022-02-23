@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const instance = axios.create({
-  // baseURL: "https://seangjemmy.github.io/TechSecAPI/",
   baseURL: "https://techsec.free.beeceptor.com/api",
   method: "get",
   timeout: 1000,
