@@ -41,6 +41,7 @@ function App() {
   return (
     <Router>
       <NavbarComp />
+
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -80,7 +81,7 @@ const Home = () => {
     <div>
       <div className="container m-0 p-0 mx-auto">
         <img
-          className="image-fluid p-0 m-0"
+          className="image-fluid"
           alt=""
           width="100%"
           height="100%"

@@ -6,33 +6,30 @@ function Forum() {
   return (
     <div className="m-3">
       <div className="dropdown text-center create-forum-post container my-4">
-        <a
-          className="btn btn-success dropdown-toggle"
-          href="#"
-          role="button"
-          id="createforumpost"
-          data-bs-toggle="dropdown"
+        <button
+          class="btn btn-success dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
           aria-expanded="false"
         >
-          + Create Post
-        </a>
-        <ul className="dropdown-menu" aria-labelledby="createforumpost">
-          <li>
-            <a className="dropdown-item" href="#">
-              Create a post in the customer
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Create a post in the supplier{" "}
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Create a post in the product
-            </a>
-          </li>
-        </ul>
+          + Create Post&ensp;
+        </button>
+
+        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a className="dropdown-item" href="#">
+            Create a post in the customer
+          </a>
+
+          <a className="dropdown-item" href="#">
+            Create a post in the supplier
+          </a>
+
+          <a className="dropdown-item" href="#">
+            Create a post in the product
+          </a>
+        </div>
       </div>
       <div id="forum-container" className="container-fluid p-0 m-0">
         <div className="container border border-dark m-0 p-0 mx-auto">
@@ -83,7 +80,7 @@ function Forum() {
                   </b>
                   &nbsp;by
                   <br />
-                  <i className="fa fa-user mr-1"></i>
+                  <i className="fa fa-user mr-2"></i>
                   <a href="#">Admin</a>
                   <br />
                   on <small>12 Dec 2021</small>
@@ -136,7 +133,7 @@ function Forum() {
                   </b>
                   &nbsp;by
                   <br />
-                  <i className="fa fa-user mr-1"></i>
+                  <i className="fa fa-user mr-2"></i>
                   <a href="#">Anonymous</a>
                   <br />
                   on <small>31 Dec 2021</small>
@@ -189,7 +186,7 @@ function Forum() {
                   </b>
                   &nbsp;by
                   <br />
-                  <i className="fa fa-user mr-1"></i>
+                  <i className="fa fa-user mr-2"></i>
                   <a href="#">Anonymous</a>
                   <br />
                   on <small>31 Dec 2021</small>
@@ -242,7 +239,7 @@ function Forum() {
                   </b>
                   &nbsp;by
                   <br />
-                  <i className="fa fa-user mr-1"></i>
+                  <i className="fa fa-user mr-2"></i>
                   <a href="#">Anonymous</a>
                   <br />
                   on <small>31 Dec 2021</small>
