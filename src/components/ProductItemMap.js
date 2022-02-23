@@ -8,7 +8,10 @@ function ProductItemMap(props) {
         <div className="row mx-auto p-0 m-0 justify-content-center">
           {props.data?.map((item, index) => {
             return (
-              <div className="col-12 col-md-3 p-2 m-0" key={item.product_id}>
+              <div
+                className="col-12 col-md-6 col-lg-4 col-xl-3 p-2 m-0"
+                key={item.product_id}
+              >
                 <div className="card border border-secondary">
                   <img
                     className="card-img-top border-secondary border-bottom"
@@ -19,10 +22,10 @@ function ProductItemMap(props) {
                     height="100%"
                   />
                   <div className="card-body">
-                    <div className="h6 font-weight-bold card-title text-center">
+                    <div className="h6 font-weight-bold card-title product-title text-center">
                       {item.product_name}
                     </div>
-                    <div className="h4 font-weight-bold card-title text-center text-danger">
+                    <div className="h5 font-weight-bold card-title text-center text-danger">
                       <small>
                         <del>${item.product_price}</del>
                       </small>{" "}
