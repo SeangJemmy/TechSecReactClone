@@ -9,6 +9,7 @@ const instance = axios.create({
     Accept: "application/json",
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
+    "Cache-Control": "public, max-age=72000",
   },
 });
 

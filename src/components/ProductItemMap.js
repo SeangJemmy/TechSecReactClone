@@ -45,10 +45,12 @@ function ProductItemMap(props) {
                     </div>
                     <div className="text-center">
                       <a href="#" className="btn btn-warning btn-sm mx-1 my-1">
-                        <i className="fa fa-shopping-cart mr-2"></i>Add to Cart
+                        <i className="fa-solid fa-shopping-cart mr-2"></i>Add to
+                        Cart
                       </a>
                       <a href="#" className="btn btn-warning btn-sm mx-1 my-1">
-                        <i className="fa fa-eye mr-2"></i>Details
+                        <i className="fa-solid fa-circle-exclamation mr-2"></i>
+                        Details
                       </a>
                     </div>
                   </div>

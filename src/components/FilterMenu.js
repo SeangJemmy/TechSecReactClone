@@ -103,7 +103,7 @@ function FilterMenu(props) {
 
   return (
     <>
-      <form className="container m-0 p-0 justify-content-center mx-auto">
+      <form className="container m-0 p-0 justify-content-center mx-auto mt-4">
         <div className="row mx-auto justify-content-center my-2">
           <div className="col-12 col-lg-4 mx-auto justify-content-center row my-1">
             <label className="my-auto col-5 col-lg- h5 font-weight-bold text-left pl-0 text-lg-center">
@@ -179,7 +179,9 @@ function FilterMenu(props) {
         Showing {brandName} Available {catName}
       </h2>
 
-      <hr className="product-hr container p-0 m-0 my-3" />
+      <div className="m-0 p-0 container mx-auto my-3">
+        <hr className="product-hr d-flex m-0 p-0" />
+      </div>
 
       <ProductItemMap data={list} />
     </>

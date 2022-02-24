@@ -7,7 +7,7 @@ function Forum() {
     <div className="m-3">
       <div className="dropdown text-center create-forum-post container my-4">
         <button
-          class="btn btn-success dropdown-toggle"
+          className="btn btn-success dropdown-toggle"
           type="button"
           id="dropdownMenuButton"
           data-toggle="dropdown"
@@ -36,8 +36,8 @@ function Forum() {
           <div className="row p-0 m-0 border-bottom border-dark">
             <div id="latest-news" className="col-12 p-0 m-0">
               <h2 className="bg-warning p-2 m-0 d-flex justify-content-center">
-                <i className="fa fa-newspaper-o d-flex my-auto mr-3"></i>Latest
-                News
+                <i className="fa-solid fa-newspaper d-flex my-auto mr-3"></i>
+                Latest News
               </h2>
             </div>
           </div>
@@ -45,7 +45,7 @@ function Forum() {
             <div className="col-12 col-md-6 col-lg-8 m-0 p-0 mb-3">
               <div className="wrap-col">
                 <h4 className="text-center">
-                  <i className="fa fa-comments"></i>&nbsp;
+                  <i className="fa-solid fa-comments"></i>&nbsp;
                   <a href="forumpages/Adminposts.html">
                     Posts from the administrators
                   </a>
@@ -64,9 +64,9 @@ function Forum() {
             <div className="col-12 col-md-3 col-lg-2 m-0 p-0">
               <div className="wrap-col wrap-border text-center">
                 <div className="m-0 p-0">
-                  <i className="fa fa-clipboard mb-2"></i>&emsp;24 Posts
+                  <i className="fa-regular fa-clipboard mb-2"></i>&emsp;24 Posts
                   <br />
-                  <i className="fa fa-lightbulb-o"></i>&emsp;12 Topics
+                  <i className="fa-regular fa-lightbulb"></i>&emsp;12 Topics
                 </div>
               </div>
             </div>
@@ -80,7 +80,7 @@ function Forum() {
                   </b>
                   &nbsp;by
                   <br />
-                  <i className="fa fa-user mr-2"></i>
+                  <i className="fa-solid fa-user mr-2"></i>
                   <a href="#">Admin</a>
                   <br />
                   on <small>12 Dec 2021</small>
@@ -94,7 +94,7 @@ function Forum() {
           <div className="row p-0 m-0 border-bottom border-dark">
             <div id="customer" className="col-12 p-0 m-0">
               <h2 className="bg-primary p-2 m-0 d-flex justify-content-center text-white">
-                <i className="fa fa-users d-flex my-auto mr-3"></i>
+                <i className="fa-solid fa-users d-flex my-auto mr-3"></i>
                 Customer
               </h2>
             </div>
@@ -103,7 +103,7 @@ function Forum() {
             <div className="col-12 col-md-6 col-lg-8 m-0 p-0 mb-3">
               <div className="wrap-col">
                 <h4 className="text-center">
-                  <i className="fa fa-comments"></i>&nbsp;
+                  <i className="fa-solid fa-comments"></i>&nbsp;
                   <a href="forumpages/Customerpost.html">
                     Posts from the customers
                   </a>
@@ -117,9 +117,9 @@ function Forum() {
             <div className="col-12 col-md-3 col-lg-2 m-0 p-0">
               <div className="wrap-col wrap-border text-center">
                 <div className="m-0 p-0">
-                  <i className="fa fa-clipboard mb-2"></i>&emsp;24 Posts
+                  <i className="fa-regular fa-clipboard mb-2"></i>&emsp;24 Posts
                   <br />
-                  <i className="fa fa-lightbulb-o"></i>&emsp;12 Topics
+                  <i className="fa-regular fa-lightbulb"></i>&emsp;12 Topics
                 </div>
               </div>
             </div>
@@ -133,7 +133,7 @@ function Forum() {
                   </b>
                   &nbsp;by
                   <br />
-                  <i className="fa fa-user mr-2"></i>
+                  <i className="fa-solid fa-user mr-2"></i>
                   <a href="#">Anonymous</a>
                   <br />
                   on <small>31 Dec 2021</small>
@@ -147,7 +147,7 @@ function Forum() {
           <div className="row p-0 m-0 border-bottom border-dark">
             <div id="supplier" className="col-12 p-0 m-0">
               <h2 className="bg-primary p-2 m-0 d-flex justify-content-center text-white">
-                <i className="fa fa-handshake-o d-flex my-auto mr-3"></i>
+                <i className="fa-regular fa-handshake d-flex my-auto mr-3"></i>
                 Supplier
               </h2>
             </div>
@@ -156,7 +156,7 @@ function Forum() {
             <div className="col-12 col-md-6 col-lg-8 m-0 p-0 mb-3">
               <div className="wrap-col">
                 <h4 className="text-center">
-                  <i className="fa fa-comments"></i>&nbsp;
+                  <i className="fa-solid fa-comments"></i>&nbsp;
                   <a href="forumpages/Supplierpost.html">
                     Posts from the suppliers
                   </a>
@@ -170,9 +170,9 @@ function Forum() {
             <div className="col-12 col-md-3 col-lg-2 m-0 p-0">
               <div className="wrap-col wrap-border text-center">
                 <div className="m-0 p-0">
-                  <i className="fa fa-clipboard mb-2"></i>&emsp;24 Posts
+                  <i className="fa-regular fa-clipboard mb-2"></i>&emsp;24 Posts
                   <br />
-                  <i className="fa fa-lightbulb-o"></i>&emsp;12 Topics
+                  <i className="fa-regular fa-lightbulb"></i>&emsp;12 Topics
                 </div>
               </div>
             </div>
@@ -186,7 +186,7 @@ function Forum() {
                   </b>
                   &nbsp;by
                   <br />
-                  <i className="fa fa-user mr-2"></i>
+                  <i className="fa-solid fa-user mr-2"></i>
                   <a href="#">Anonymous</a>
                   <br />
                   on <small>31 Dec 2021</small>
@@ -200,7 +200,7 @@ function Forum() {
           <div className="row p-0 m-0 border-bottom border-dark">
             <div id="product" className="col-12 p-0 m-0">
               <h2 className="bg-primary p-2 m-0 d-flex justify-content-center text-white">
-                <i className="fa fa-archive d-flex my-auto mr-3"></i>
+                <i className="fa-solid fa-archive d-flex my-auto mr-3"></i>
                 Product
               </h2>
             </div>
@@ -209,7 +209,7 @@ function Forum() {
             <div className="col-12 col-md-6 col-lg-8 m-0 p-0 mb-3">
               <div className="wrap-col">
                 <h4 className="text-center">
-                  <i className="fa fa-comments"></i>&nbsp;
+                  <i className="fa-solid fa-comments"></i>&nbsp;
                   <a href="forumpages/Productpost.html">
                     Posts about the products
                   </a>
@@ -223,9 +223,9 @@ function Forum() {
             <div className="col-12 col-md-3 col-lg-2 m-0 p-0">
               <div className="wrap-col wrap-border text-center">
                 <div className="m-0 p-0">
-                  <i className="fa fa-clipboard mb-2"></i>&emsp;24 Posts
+                  <i className="fa-regular fa-clipboard mb-2"></i>&emsp;24 Posts
                   <br />
-                  <i className="fa fa-lightbulb-o"></i>&emsp;12 Topics
+                  <i className="fa-regular fa-lightbulb"></i>&emsp;12 Topics
                 </div>
               </div>
             </div>
@@ -239,7 +239,7 @@ function Forum() {
                   </b>
                   &nbsp;by
                   <br />
-                  <i className="fa fa-user mr-2"></i>
+                  <i className="fa-solid fa-user mr-2"></i>
                   <a href="#">Anonymous</a>
                   <br />
                   on <small>31 Dec 2021</small>
