@@ -15,7 +15,7 @@ function ProductItemMap(props) {
           {dataP?.map((item) => {
             return (
               <div
-                className="col-12 col-md-6 col-lg-4 col-xl-3 p-2 m-0"
+                className="col-6 col-md-6 col-lg-4 col-xl-3 p-1 m-0"
                 key={item.product_id}
               >
                 <div className="card border border-secondary">
@@ -28,7 +28,7 @@ function ProductItemMap(props) {
                     height="100%"
                   />
                   <div className="card-body px-0">
-                    <div className="h6 font-weight-bold card-title product-title text-center">
+                    <div className="h6 font-weight-bold card-title text-center px-1">
                       {item.product_name}
                     </div>
                     <div className="h5 font-weight-bold card-title text-center text-danger">

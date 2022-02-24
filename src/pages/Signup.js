@@ -44,7 +44,7 @@ function Signup() {
                   id="customer"
                   value="Customer"
                   checked
-                />
+                />{" "}
                 Customer
               </label>
 
@@ -54,7 +54,7 @@ function Signup() {
                   type="radio"
                   id="supplier"
                   value="Supplier"
-                />
+                />{" "}
                 Supplier
               </label>
             </div>
@@ -110,7 +110,7 @@ function Signup() {
             <div className="checkbox mt-2 mb-3">
               <label>
                 <input type="checkbox" value="agree" required /> I agree to the
-                <a href="/termsofservice">Terms of Service</a> &
+                <a href="/termsofservice"> Terms of Service</a> &{" "}
                 <a href="/privacypolicy">Privacy Policy</a>.
               </label>
             </div>

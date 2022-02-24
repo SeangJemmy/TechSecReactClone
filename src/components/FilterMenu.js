@@ -175,7 +175,7 @@ function FilterMenu(props) {
         </div>
       </form>
 
-      <h2 className="font-weight-bold text-center mt-4 text-uppercase">
+      <h2 className="font-weight-bold text-center mt-4 text-uppercase p-1">
         Showing {brandName} Available {catName}
       </h2>
 

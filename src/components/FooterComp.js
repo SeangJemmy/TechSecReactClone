@@ -8,8 +8,8 @@ function FooterComp() {
   return (
     <footer className="text-center pb-4">
       <section className="reason-to-buy">
-        <h2>
-          <span> GREAT REASONS TO USE OUR SERVICE </span>
+        <h2 className="p-1">
+          <span>GREAT REASONS TO USE OUR SERVICE</span>
         </h2>
 
         <div className="reason-to-buy-wrapper">
@@ -83,7 +83,7 @@ function FooterComp() {
         </div>
       </section>
 
-      <h4 className="mt-1 mb-2">Subscribe to our Newsletter</h4>
+      <h4 className="mt-1 mb-2 p-1">Subscribe to our Newsletter</h4>
       <SubscribeComp />
       <a href="https://www.techsec.cf/">© TechSec {thisYear}</a>
     </footer>
