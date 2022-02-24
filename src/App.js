@@ -18,6 +18,7 @@ import Contact from "./pages/Contact";
 import Product from "./pages/Product";
 import { useEffect, useState } from "react";
 import { ListContextProvider } from "./contexts/ProductItemsContext";
+import { scrollToTop } from "./components/ScrollToTop";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -31,13 +32,6 @@ function App() {
       }
     });
   }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // for smoothly scrolling
-    });
-  };
 
   return (
     <Router>

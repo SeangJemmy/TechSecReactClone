@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import { BrowserRouter as Router, NavLink } from "react-router-dom";
+import { scrollToTop } from "../components/ScrollToTop";
 
 function NavbarComp() {
   return (
@@ -32,6 +33,7 @@ function NavbarComp() {
         <ul className="navbar-nav mr-auto text-center mt-2 mt-lg-0">
           <li className="nav-item">
             <NavLink
+              onClick={() => scrollToTop()}
               to="/"
               className={({ isActive }) =>
                 isActive ? "active nav-link" : "nav-link"
@@ -45,6 +47,7 @@ function NavbarComp() {
 
           <li className="nav-item">
             <NavLink
+              onClick={() => scrollToTop()}
               to="/product"
               className={({ isActive }) =>
                 isActive ? "active nav-link" : "nav-link"
@@ -58,6 +61,7 @@ function NavbarComp() {
 
           <li className="nav-item">
             <NavLink
+              onClick={() => scrollToTop()}
               to="/forum"
               className={({ isActive }) =>
                 isActive ? "active nav-link" : "nav-link"
@@ -71,6 +75,7 @@ function NavbarComp() {
 
           <li className="nav-item">
             <NavLink
+              onClick={() => scrollToTop()}
               to="/login"
               className={({ isActive }) =>
                 isActive ? "active nav-link" : "nav-link"
@@ -99,6 +104,7 @@ function NavbarComp() {
               aria-labelledby="navbarDropdown"
             >
               <NavLink
+                onClick={() => scrollToTop()}
                 to="/about"
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
@@ -110,6 +116,7 @@ function NavbarComp() {
               </NavLink>
 
               <NavLink
+                onClick={() => scrollToTop()}
                 to="/contact"
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
@@ -120,6 +127,7 @@ function NavbarComp() {
                 Contact Us
               </NavLink>
               <NavLink
+                onClick={() => scrollToTop()}
                 to="/faq"
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
@@ -131,6 +139,7 @@ function NavbarComp() {
               </NavLink>
               <div className="dropdown-divider"></div>
               <NavLink
+                onClick={() => scrollToTop()}
                 to="/privacypolicy"
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
@@ -142,6 +151,7 @@ function NavbarComp() {
               </NavLink>
 
               <NavLink
+                onClick={() => scrollToTop()}
                 to="/termsofservice"
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
@@ -152,6 +162,7 @@ function NavbarComp() {
                 Terms of Service
               </NavLink>
               <NavLink
+                onClick={() => scrollToTop()}
                 to="/tracking"
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
