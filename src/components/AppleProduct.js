@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import "../App.css";
 
 import ProductItemMap from "./ProductItemMap";
@@ -6,19 +6,14 @@ import { ListContext } from "../contexts/ProductItemsContext";
 
 function AppleProduct() {
   const { productData } = useContext(ListContext);
-  const [productDataUpdate, setProductDataUpdate] = useState(productData);
   const selectedBrand = "apple";
   const selectedCategory = "phone";
-
-  useEffect(() => {
-    setProductDataUpdate(productData);
-  }, [productData, productDataUpdate]);
 
   return (
     <>
       <div className="m-3">
         <ProductItemMap
-          data={productDataUpdate?.filter((item) => {
+          data={productData?.filter((item) => {
             return (
               item.product_category === selectedCategory &&
               item.product_brand === selectedBrand
