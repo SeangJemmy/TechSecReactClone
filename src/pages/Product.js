@@ -8,6 +8,10 @@ function Product() {
   SetRouteTitle("TechSec ~ Products");
   const { productData } = GetProductData();
 
+  if (productData == []) {
+    window.location.reload();
+  }
+
   return (
     <div className="m-3">
       <FilterMenu data={productData} />
