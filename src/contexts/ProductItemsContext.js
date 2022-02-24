@@ -12,7 +12,7 @@ export function GetProductData() {
 
 export const ListContextProvider = ({ children }) => {
   const [productData, setPD] = useState(
-    null
+    []
     //
     // [
     //   {

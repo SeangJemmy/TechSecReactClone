@@ -6,11 +6,15 @@ import { GetProductData } from "../contexts/ProductItemsContext";
 
 function Home() {
   SetRouteTitle("TechSec ~ We Got What You Need");
-  const { productData, setPD } = GetProductData();
+  const { productData } = GetProductData();
   const [show, setShow] = useState(false);
 
+  if (productData == []) {
+    window.location.reload();
+  }
+
   useEffect(() => {
-    if (productData) {
+    if (productData != []) {
       setShow(() => true);
     }
   }, [productData]);
