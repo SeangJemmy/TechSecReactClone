@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import FooterComp from "./components/FooterComp";
 import About from "./pages/About";
 import "./main";
+import Home from "./pages/Home";
 import Forum from "./pages/Forum";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -16,7 +17,6 @@ import Tracking from "./pages/Tracking";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
 import { useEffect, useState } from "react";
-import AppleProduct from "./components/AppleProduct";
 import { ListContextProvider } from "./contexts/ProductItemsContext";
 
 function App() {
@@ -44,7 +44,15 @@ function App() {
       <NavbarComp />
 
       <Routes>
-        <Route path="/" exact element={<Home />} />
+        <Route
+          path="/"
+          exact
+          element={
+            <ListContextProvider>
+              <Home />
+            </ListContextProvider>
+          }
+        />
         <Route
           path="/product"
           element={
@@ -83,29 +91,6 @@ function App() {
     </Router>
   );
 }
-
-const Home = () => {
-  SetRouteTitle("TechSec ~ We Got What You Need");
-  return (
-    <div>
-      <div className="container m-0 p-0 mx-auto">
-        <img
-          className="image-fluid"
-          alt=""
-          width="100%"
-          height="100%"
-          src="https://techsec.cf/images/banner.jpg"
-        />
-      </div>
-      <h2 className="font-weight-bold text-center mt-4 mb-3">
-        Apple iPhones On Sale
-      </h2>
-      <ListContextProvider>
-        <AppleProduct />
-      </ListContextProvider>
-    </div>
-  );
-};
 
 const Error404 = () => {
   SetRouteTitle("TechSec ~ Page Not Found");
