@@ -35,7 +35,7 @@ function Home() {
           <button
             className="mb-4 d-flex btn btn-lg btn-primary mx-auto"
             onClick={() => {
-              location.reload();
+              window.location.reload();
             }}
           >
             Reload Data
