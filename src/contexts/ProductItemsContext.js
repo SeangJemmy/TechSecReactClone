@@ -1,10 +1,14 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useContext } from "react";
 import api from "../api/axios";
 
-export const ListContext = createContext({
+const ListContext = createContext({
   productData: null,
-  setPD: (data) => {},
+  setPD: () => {},
 });
+
+export function GetProductData() {
+  return useContext(ListContext);
+}
 
 export const ListContextProvider = ({ children }) => {
   const [productData, setPD] = useState(
@@ -29,6 +33,7 @@ export const ListContextProvider = ({ children }) => {
       .get(`api`)
       .then((res) => {
         setPD(() => res.data.productitems);
+        console.log("API Responded: " + Date());
       })
       .catch((er) => console.log(er));
   }, []);

@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import "../App.css";
 import SetRouteTitle from "../components/SetRouteTitle";
 import AppleProduct from "../components/AppleProduct";
-import { ListContext } from "../contexts/ProductItemsContext";
+import { GetProductData } from "../contexts/ProductItemsContext";
 
 function Home() {
   SetRouteTitle("TechSec ~ We Got What You Need");
-  const { productData } = useContext(ListContext);
+  const { productData } = GetProductData();
 
   return (
     <div>

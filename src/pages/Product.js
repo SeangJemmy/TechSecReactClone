@@ -1,12 +1,12 @@
 import "../App.css";
 import FilterMenu from "../components/FilterMenu";
 import SetRouteTitle from "../components/SetRouteTitle";
-import React, { useContext } from "react";
-import { ListContext } from "../contexts/ProductItemsContext";
+import React from "react";
+import { GetProductData } from "../contexts/ProductItemsContext";
 
 function Product() {
   SetRouteTitle("TechSec ~ Products");
-  const { productData } = useContext(ListContext);
+  const { productData } = GetProductData();
 
   return (
     <div className="m-3">
