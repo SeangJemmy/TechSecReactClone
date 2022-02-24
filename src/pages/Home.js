@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../App.css";
 import SetRouteTitle from "../components/SetRouteTitle";
 import AppleProduct from "../components/AppleProduct";
@@ -7,17 +7,10 @@ import { GetProductData } from "../contexts/ProductItemsContext";
 function Home() {
   SetRouteTitle("TechSec ~ We Got What You Need");
   const { productData } = GetProductData();
-  const [show, setShow] = useState(false);
 
   if (productData == []) {
     window.location.reload();
   }
-
-  const showHandle = () => {
-    if (!show) {
-      setShow((prev) => true);
-    }
-  };
 
   return (
     <div>
@@ -34,12 +27,11 @@ function Home() {
         Apple iPhones On Sale
       </h2>
 
-      {!show ? (
+      {productData == [] ? (
         <div className="m-3 row">
           <button
             className="mb-4 d-flex btn btn-lg btn-primary mx-auto"
             onClick={() => {
-              showHandle();
               window.location.reload();
             }}
           >

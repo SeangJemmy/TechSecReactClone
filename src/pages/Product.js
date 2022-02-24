@@ -14,7 +14,20 @@ function Product() {
 
   return (
     <div className="m-3">
-      <FilterMenu data={productData} />
+      {productData == [] ? (
+        <div className="m-3 row">
+          <button
+            className="mb-4 d-flex btn btn-lg btn-primary mx-auto"
+            onClick={() => {
+              window.location.reload();
+            }}
+          >
+            Reload Data
+          </button>
+        </div>
+      ) : (
+        <FilterMenu data={productData} />
+      )}
     </div>
   );
 }
