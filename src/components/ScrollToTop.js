@@ -4,3 +4,7 @@ export const scrollToTop = () => {
     behavior: "smooth",
   });
 };
+
+export const scrollToZero = () => {
+  window.scrollTo(0, 0);
+};

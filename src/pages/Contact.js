@@ -1,7 +1,7 @@
 import "../App.css";
 import $ from "jquery";
 import SetRouteTitle from "../components/SetRouteTitle";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function Contact() {
   SetRouteTitle("TechSec ~ Contact Us");
