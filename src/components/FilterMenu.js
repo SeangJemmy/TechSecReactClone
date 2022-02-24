@@ -179,7 +179,7 @@ function FilterMenu(props) {
         Showing {brandName} Available {catName}
       </h2>
 
-      <hr className="product-hr container" />
+      <hr className="product-hr container p-0 m-0 my-3" />
 
       <ProductItemMap data={list} />
     </>
