@@ -19,10 +19,6 @@ function Home() {
     }
   };
 
-  useEffect(() => {
-    showHandle();
-  }, [show]);
-
   return (
     <div>
       <div className="container m-0 p-0 mx-auto">

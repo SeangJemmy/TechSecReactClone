@@ -38,7 +38,7 @@ export const ListContextProvider = ({ children }) => {
       })
       .catch((er) => {
         alert(
-          "There was a problem retreiving data from api server. Try reloading your browser!\n\t~TechSec"
+          `There was a problem retreiving data from api server. Try reloading your browser! ~TechSec\nError Code: ${er}`
         );
         console.log(er);
       });
