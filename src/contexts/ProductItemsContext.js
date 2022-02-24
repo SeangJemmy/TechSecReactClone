@@ -12,7 +12,10 @@ export const ListContextProvider = ({ children }) => {
   useEffect(() => {
     api
       .get(``)
-      .then((res) => setPD(res.data.productitems))
+      .then((res) => {
+        setPD(res.data.productitems);
+        console.log(res.data.productitems);
+      })
       .catch((er) => console.log(er));
   }, []);
 
