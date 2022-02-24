@@ -33,7 +33,7 @@ function ProductItemMap(props) {
                     </div>
                     <div className="h5 font-weight-bold card-title text-center text-danger">
                       {item.product_discount_price === item.product_price ? (
-                        item.product_discount_price
+                        <>${item.product_discount_price}</>
                       ) : (
                         <>
                           <small>
