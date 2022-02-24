@@ -36,7 +36,12 @@ export const ListContextProvider = ({ children }) => {
         setPD(() => res.data.productitems);
         console.log("API Responded: " + Date());
       })
-      .catch((er) => console.log(er));
+      .catch((er) => {
+        alert(
+          "There was a problem retreiving data from api server. Try again later!\n\t~TechSec"
+        );
+        console.log(er);
+      });
   }, []);
 
   return (
