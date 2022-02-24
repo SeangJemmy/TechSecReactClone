@@ -1,13 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../App.css";
-// import api from "../api/axios";
+
 import ProductItemMap from "./ProductItemMap";
 import { ListContext } from "../contexts/ProductItemsContext";
 
 function AppleProduct() {
   const { productData } = useContext(ListContext);
+  const [productDataUpdate, setProductDataUpdate] = useState(productData);
   const selectedBrand = "apple";
   const selectedCategory = "phone";
+
+  // useEffect(() => {
+  //   setProductDataUpdate(productData);
+  // }, [productData]);
 
   return (
     <>
