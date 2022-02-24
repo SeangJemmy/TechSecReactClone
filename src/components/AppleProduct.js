@@ -1,13 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "../App.css";
 
 import ProductItemMap from "./ProductItemMap";
 import { ListContext } from "../contexts/ProductItemsContext";
 
 function AppleProduct() {
-  const { productData } = useContext(ListContext);
+  const { productData, setPD } = useContext(ListContext);
   const selectedBrand = "apple";
   const selectedCategory = "phone";
+
+  useEffect(() => {
+    setPD(productData);
+  }, [productData]);
 
   return (
     <>
