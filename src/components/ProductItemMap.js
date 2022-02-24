@@ -32,10 +32,16 @@ function ProductItemMap(props) {
                       {item.product_name}
                     </div>
                     <div className="h5 font-weight-bold card-title text-center text-danger">
-                      <small>
-                        <del>${item.product_price}</del>
-                      </small>{" "}
-                      ${item.product_discount_price}
+                      {item.product_discount_price === item.product_price ? (
+                        item.product_discount_price
+                      ) : (
+                        <>
+                          <small>
+                            <del>${item.product_price}</del>
+                          </small>
+                          &nbsp;${item.product_discount_price}
+                        </>
+                      )}
                     </div>
                     <div className="text-center">
                       <a href="#" className="btn btn-warning btn-sm mx-1 my-1">
