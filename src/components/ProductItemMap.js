@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
 
 function ProductItemMap(props) {
+  const [dataP, setData] = useState(props.data);
+
+  useEffect(() => {
+    setData(props.data);
+  }, [props.data]);
+
   return (
     <>
       <div className="container m-0 p-0 mx-auto">
         <div className="row mx-auto p-0 m-0">
-          {props.data?.map((item, index) => {
+          {dataP?.map((item) => {
             return (
               <div
                 className="col-12 col-md-6 col-lg-4 col-xl-3 p-2 m-0"
