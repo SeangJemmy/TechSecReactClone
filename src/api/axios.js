@@ -5,7 +5,6 @@ const instance = axios.create({
   // baseURL: "https://techsecapi.free.beeceptor.com",
   // baseURL: "https://techsecapi2.free.beeceptor.com",
   baseURL: "https://techsecapi3.free.beeceptor.com",
-  timeout: 1000,
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",

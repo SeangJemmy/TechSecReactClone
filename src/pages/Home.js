@@ -23,8 +23,8 @@ function Home() {
           src="https://techsec.cf/images/banner.jpg"
         />
       </div>
-      <h2 className="font-weight-bold text-center mt-4 mb-3">
-        Apple iPhones On Sale
+      <h2 className="font-weight-bold text-center mt-4 mb-3 text-uppercase">
+        APPLE IPHONES ON SALE
       </h2>
 
       {productData == [] ? (
