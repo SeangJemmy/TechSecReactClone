@@ -10,15 +10,15 @@ function AppleProduct() {
   const selectedBrand = "apple";
   const selectedCategory = "phone";
 
-  // useEffect(() => {
-  //   setProductDataUpdate(productData);
-  // }, [productData]);
+  useEffect(() => {
+    setProductDataUpdate(productData);
+  }, [productData, productDataUpdate]);
 
   return (
     <>
       <div className="m-3">
         <ProductItemMap
-          data={productData?.filter((item) => {
+          data={productDataUpdate?.filter((item) => {
             return (
               item.product_category === selectedCategory &&
               item.product_brand === selectedBrand

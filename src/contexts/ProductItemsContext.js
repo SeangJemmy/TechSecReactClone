@@ -18,10 +18,6 @@ export const ListContextProvider = ({ children }) => {
       .catch((er) => console.log(er));
   }, []);
 
-  useEffect(() => {
-    setPD(productData);
-  }, [productData]);
-
   return (
     <ListContext.Provider value={{ productData, setPD }}>
       {children}
