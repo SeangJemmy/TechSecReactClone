@@ -11,14 +11,16 @@ function Home() {
 
   if (productData == []) {
     window.location.reload();
-  } else {
-    setShow((prev) => true);
   }
 
-  useEffect(() => {
+  const showHandle = () => {
     if (!show) {
       setShow((prev) => true);
     }
+  };
+
+  useEffect(() => {
+    showHandle();
   }, [show]);
 
   return (
@@ -41,6 +43,7 @@ function Home() {
           <button
             className="mb-4 d-flex btn btn-lg btn-primary mx-auto"
             onClick={() => {
+              showHandle();
               window.location.reload();
             }}
           >
