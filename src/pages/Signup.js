@@ -23,7 +23,7 @@ function Signup() {
               <h4 className="font-weight-normal mb-3">Sign Up</h4>
             </div>
 
-            <label for="username" className="sr-only">
+            <label htmlFor="username" className="sr-only">
               Username
             </label>
             <input
@@ -31,9 +31,9 @@ function Signup() {
               id="username"
               className="form-control mb-1"
               placeholder="Username"
-              minlength="5"
+              minLength="5"
               required
-              autofocus
+              autoFocus
             />
 
             <div className="font-weight-bold">
@@ -43,7 +43,8 @@ function Signup() {
                   type="radio"
                   id="customer"
                   value="Customer"
-                  checked
+                  readOnly
+                  defaultChecked
                 />{" "}
                 Customer
               </label>
@@ -59,7 +60,7 @@ function Signup() {
               </label>
             </div>
 
-            <label for="email" className="sr-only">
+            <label htmlFor="email" className="sr-only">
               Email address
             </label>
             <input
@@ -71,7 +72,7 @@ function Signup() {
               required
             />
 
-            <label for="cemail" className="sr-only">
+            <label htmlFor="cemail" className="sr-only">
               Confirm email address
             </label>
             <input
@@ -83,7 +84,7 @@ function Signup() {
               required
             />
 
-            <label for="password" className="sr-only">
+            <label htmlFor="password" className="sr-only">
               Password
             </label>
             <input
@@ -91,11 +92,11 @@ function Signup() {
               id="password"
               className="form-control mb-1"
               placeholder="Password"
-              minlength="8"
+              minLength="8"
               required
             />
 
-            <label for="cpassword" className="sr-only">
+            <label htmlFor="cpassword" className="sr-only">
               Confirm Password
             </label>
             <input
@@ -103,7 +104,7 @@ function Signup() {
               id="cpassword"
               className="form-control mb-1"
               placeholder="Confirm Password"
-              minlength="8"
+              minLength="8"
               required
             />
 

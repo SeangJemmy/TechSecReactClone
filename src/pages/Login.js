@@ -19,7 +19,7 @@ function Login() {
                 />
               </a>
             </div>
-            <label for="email" className="sr-only">
+            <label htmlFor="email" className="sr-only">
               Email address
             </label>
             <input
@@ -29,10 +29,10 @@ function Login() {
               placeholder="Email Address"
               pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
               required
-              autofocus
+              autoFocus
             />
 
-            <label for="password" className="sr-only">
+            <label htmlFor="password" className="sr-only">
               Password
             </label>
             <input
@@ -40,7 +40,7 @@ function Login() {
               id="password"
               className="form-control"
               placeholder="Password"
-              minlength="8"
+              minLength="8"
               required
             />
             <div className="checkbox mt-1">

@@ -22,7 +22,7 @@ function Fpass() {
             <div>
               <h4 className="font-weight-normal mb-3">Forgot Password</h4>
             </div>
-            <label for="email" className="sr-only">
+            <label htmlFor="email" className="sr-only">
               Email address
             </label>
             <input
@@ -32,7 +32,7 @@ function Fpass() {
               placeholder="Email Address"
               pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
               required
-              autofocus
+              autoFocus
             />
 
             <div className="checkbox mt-2">

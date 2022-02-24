@@ -9,8 +9,8 @@ function NavbarComp() {
         className="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbarTogglerDemo03"
-        aria-controls="navbarTogglerDemo03"
+        data-target="#TechSecNavToggler"
+        aria-controls="TechSecNavToggler"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
@@ -28,7 +28,7 @@ function NavbarComp() {
         />
       </a>
 
-      <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <div className="collapse navbar-collapse" id="TechSecNavToggler">
         <ul className="navbar-nav mr-auto text-center mt-2 mt-lg-0">
           <li className="nav-item">
             <NavLink
@@ -36,9 +36,8 @@ function NavbarComp() {
               className={({ isActive }) =>
                 isActive ? "active nav-link" : "nav-link"
               }
-              onClick={() => {
-                window.location.href = "/";
-              }}
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
             >
               HOME
             </NavLink>
@@ -50,9 +49,8 @@ function NavbarComp() {
               className={({ isActive }) =>
                 isActive ? "active nav-link" : "nav-link"
               }
-              onClick={() => {
-                window.location.href = "/product";
-              }}
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
             >
               PRODUCT
             </NavLink>
@@ -64,9 +62,8 @@ function NavbarComp() {
               className={({ isActive }) =>
                 isActive ? "active nav-link" : "nav-link"
               }
-              onClick={() => {
-                window.location.href = "/forum";
-              }}
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
             >
               FORUM
             </NavLink>
@@ -78,9 +75,8 @@ function NavbarComp() {
               className={({ isActive }) =>
                 isActive ? "active nav-link" : "nav-link"
               }
-              onClick={() => {
-                window.location.href = "/login";
-              }}
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
             >
               LOGIN
             </NavLink>
@@ -107,9 +103,8 @@ function NavbarComp() {
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
                 }
-                onClick={() => {
-                  window.location.href = "/about";
-                }}
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
               >
                 About Us
               </NavLink>
@@ -119,9 +114,8 @@ function NavbarComp() {
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
                 }
-                onClick={() => {
-                  window.location.href = "/contact";
-                }}
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
               >
                 Contact Us
               </NavLink>
@@ -130,9 +124,8 @@ function NavbarComp() {
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
                 }
-                onClick={() => {
-                  window.location.href = "/faq";
-                }}
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
               >
                 FAQ
               </NavLink>
@@ -142,9 +135,8 @@ function NavbarComp() {
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
                 }
-                onClick={() => {
-                  window.location.href = "/privacypolicy";
-                }}
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
               >
                 Privacy Policy
               </NavLink>
@@ -154,9 +146,8 @@ function NavbarComp() {
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
                 }
-                onClick={() => {
-                  window.location.href = "/termsofservice";
-                }}
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
               >
                 Terms of Service
               </NavLink>
@@ -165,9 +156,8 @@ function NavbarComp() {
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
                 }
-                onClick={() => {
-                  window.location.href = "/tracking";
-                }}
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
               >
                 Tracking
               </NavLink>
