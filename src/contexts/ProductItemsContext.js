@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect, useContext } from "react";
 import api from "../api/axios";
 
 const ListContext = createContext({
-  productData: null,
+  productData: [],
   setPD: () => {},
 });
 
@@ -12,19 +12,20 @@ export function GetProductData() {
 
 export const ListContextProvider = ({ children }) => {
   const [productData, setPD] = useState(
+    null
     //
-    [
-      {
-        product_id: "001",
-        product_name: "Reload Your Browser",
-        product_category: "phone",
-        product_price: "0",
-        product_discount_price: "0",
-        image: "./logo512.png",
-        product_brand: "apple",
-        product_verified: "true",
-      },
-    ]
+    // [
+    //   {
+    //     product_id: "001",
+    //     product_name: "Reload Your Browser",
+    //     product_category: "phone",
+    //     product_price: "0",
+    //     product_discount_price: "0",
+    //     image: "./logo512.png",
+    //     product_brand: "apple",
+    //     product_verified: "true",
+    //   },
+    // ]
     //
   );
 

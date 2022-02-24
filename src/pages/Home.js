@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
 import SetRouteTitle from "../components/SetRouteTitle";
 import AppleProduct from "../components/AppleProduct";
@@ -6,7 +6,14 @@ import { GetProductData } from "../contexts/ProductItemsContext";
 
 function Home() {
   SetRouteTitle("TechSec ~ We Got What You Need");
-  const { productData } = GetProductData();
+  const { productData, setPD } = GetProductData();
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    if (productData) {
+      setShow(() => true);
+    }
+  }, [productData]);
 
   return (
     <div>
@@ -22,7 +29,21 @@ function Home() {
       <h2 className="font-weight-bold text-center mt-4 mb-3">
         Apple iPhones On Sale
       </h2>
-      <AppleProduct data={productData} />
+
+      {!show ? (
+        <div className="m-3 row">
+          <button
+            className="mb-4 d-flex btn btn-lg btn-primary mx-auto"
+            onClick={() => {
+              setShow(() => true);
+            }}
+          >
+            Load Data
+          </button>
+        </div>
+      ) : (
+        <AppleProduct data={productData} />
+      )}
     </div>
   );
 }
