@@ -11,13 +11,15 @@ function Home() {
 
   if (productData == []) {
     window.location.reload();
+  } else {
+    setShow((prev) => true);
   }
 
   useEffect(() => {
-    if (productData != []) {
-      setShow(() => true);
+    if (!show) {
+      setShow((prev) => true);
     }
-  }, [productData]);
+  }, [show]);
 
   return (
     <div>
