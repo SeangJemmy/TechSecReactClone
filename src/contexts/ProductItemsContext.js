@@ -26,7 +26,7 @@ export const ListContextProvider = ({ children }) => {
 
   useEffect(() => {
     api
-      .get(``)
+      .get(`api`)
       .then((res) => {
         setPD(() => res.data.productitems);
       })
