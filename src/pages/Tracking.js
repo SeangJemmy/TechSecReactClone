@@ -15,9 +15,9 @@ function Tracking() {
 
   return (
     <>
-      <h1 className="mt-3 mb-3 text-center">Track Your Order</h1>
+      <h2 className="mt-3 mb-3 text-center">Track Your Order</h2>
 
-      <div className="d-flex justify-content-center mb-4 overwiteafter">
+      <div className="d-flex justify-content-center mb-4">
         <div id="as-root"></div>
         <div
           className="as-track-button"

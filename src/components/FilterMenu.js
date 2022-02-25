@@ -164,7 +164,7 @@ function FilterMenu(props) {
           </div>
         </div>
 
-        <div className="row justify-content-center align-items-center mx-auto my-2">
+        <div className="row justify-content-center align-items-center mx-auto my-2 mt-4">
           <input
             className="form-control col-11"
             type="search"

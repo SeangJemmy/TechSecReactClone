@@ -1,11 +1,11 @@
 import React from "react";
 import "../App.css";
 import { BrowserRouter as Router, NavLink } from "react-router-dom";
-import { scrollToZero } from "../components/ScrollToTop";
+import { ScrollToZero } from "../components/ScrollToTop";
 
 function NavbarComp() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light">
+    <nav className="navbar navbar-expand-lg navbar-light" id="navv">
       <button
         className="navbar-toggler"
         type="button"
@@ -33,7 +33,7 @@ function NavbarComp() {
         <ul className="navbar-nav mr-auto text-center mt-2 mt-lg-0">
           <li className="nav-item">
             <NavLink
-              onClick={() => scrollToZero()}
+              onClick={() => ScrollToZero()}
               to="/"
               className={({ isActive }) =>
                 isActive ? "active nav-link" : "nav-link"
@@ -47,7 +47,7 @@ function NavbarComp() {
 
           <li className="nav-item">
             <NavLink
-              onClick={() => scrollToZero()}
+              onClick={() => ScrollToZero()}
               to="/product"
               className={({ isActive }) =>
                 isActive ? "active nav-link" : "nav-link"
@@ -61,7 +61,7 @@ function NavbarComp() {
 
           <li className="nav-item">
             <NavLink
-              onClick={() => scrollToZero()}
+              onClick={() => ScrollToZero()}
               to="/forum"
               className={({ isActive }) =>
                 isActive ? "active nav-link" : "nav-link"
@@ -75,7 +75,7 @@ function NavbarComp() {
 
           <li className="nav-item">
             <NavLink
-              onClick={() => scrollToZero()}
+              onClick={() => ScrollToZero()}
               to="/login"
               className={({ isActive }) =>
                 isActive ? "active nav-link" : "nav-link"
@@ -104,7 +104,7 @@ function NavbarComp() {
               aria-labelledby="navbarDropdown"
             >
               <NavLink
-                onClick={() => scrollToZero()}
+                onClick={() => ScrollToZero()}
                 to="/about"
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
@@ -116,7 +116,7 @@ function NavbarComp() {
               </NavLink>
 
               <NavLink
-                onClick={() => scrollToZero()}
+                onClick={() => ScrollToZero()}
                 to="/contact"
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
@@ -127,7 +127,7 @@ function NavbarComp() {
                 Contact Us
               </NavLink>
               <NavLink
-                onClick={() => scrollToZero()}
+                onClick={() => ScrollToZero()}
                 to="/faq"
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
@@ -139,7 +139,7 @@ function NavbarComp() {
               </NavLink>
               <div className="dropdown-divider"></div>
               <NavLink
-                onClick={() => scrollToZero()}
+                onClick={() => ScrollToZero()}
                 to="/privacypolicy"
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
@@ -151,7 +151,7 @@ function NavbarComp() {
               </NavLink>
 
               <NavLink
-                onClick={() => scrollToZero()}
+                onClick={() => ScrollToZero()}
                 to="/termsofservice"
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
@@ -162,7 +162,7 @@ function NavbarComp() {
                 Terms of Service
               </NavLink>
               <NavLink
-                onClick={() => scrollToZero()}
+                onClick={() => (window.location.href = "/tracking")}
                 to="/tracking"
                 className={({ isActive }) =>
                   isActive ? "active dropdown-item" : "dropdown-item"
