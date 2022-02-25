@@ -7,6 +7,8 @@ function Contact() {
   SetRouteTitle("TechSec ~ Contact Us");
 
   const [pvalue, setPValue] = useState("");
+  const [isSubmitting, setSubmit] = useState(false);
+
   const handlePValue = (event) => setPValue(event.target.value);
 
   const scriptURL =
@@ -15,20 +17,32 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    $("#submitdate").val(
-      new Date().toLocaleString("en-US", { timeZone: "Asia/Jakarta" })
-    );
 
-    fetch(scriptURL, { method: "POST", body: new FormData(form) })
-      .then((response) => {
-        console.log("Successfully submited!", response);
-        alert("Successfully submited your contact information!");
-        $("#techsec-form").trigger("reset");
-      })
-      .catch((error) => {
-        console.error("Error!", error.message);
-        alert("There was an error submitting your contact information!");
-      });
+    if (!isSubmitting) {
+      setSubmit((prev) => true);
+      $("#submitdate").val(
+        new Date().toLocaleString("en-US", { timeZone: "Asia/Jakarta" })
+      );
+
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then((response) => {
+          setTimeout(() => {
+            $("#techsec-form").trigger("reset");
+            console.log("Successfully submited!", response);
+            alert("Successfully submited your contact information!");
+            setSubmit((prev) => false);
+          }, 3000);
+        })
+        .catch((error) => {
+          console.error("Error!", error.message);
+          alert("There was an error submitting your contact information!");
+          setSubmit((prev) => false);
+        });
+
+      return;
+    }
+
+    alert("Your information is being submitted! Please stand by...");
   };
 
   return (

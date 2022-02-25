@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../App.css";
 import $ from "jquery";
 
@@ -8,29 +8,45 @@ function valEmail(email) {
 }
 
 function SubscribeComp() {
+  const [isSubmitting, setSubmit] = useState(false);
+
   const subemailform = document.forms["subscribe-email-form"];
   const subemailURL =
     "https://script.google.com/macros/s/AKfycbyzrgLU9rhsxo7GxFsUpXCi6P6ASil8RJk_GsWFo3sNPMNOocIhwbKLYmw8s-3wyQE/exec";
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    var subEm = $("#subscribe-email").val();
-    if (!subEm || !valEmail(subEm)) {
-      alert("You need to enter a valid email address!");
-    } else {
+    if (!isSubmitting) {
+      var subEm = $("#subscribe-email").val();
+
+      if (!subEm || !valEmail(subEm)) {
+        alert("You need to enter a valid email address!");
+        return;
+      }
+
+      setSubmit((prev) => true);
+
       fetch(subemailURL, { method: "POST", body: new FormData(subemailform) })
         .then((response) => {
-          console.log("Success!", response);
-          alert(
-            `You have successfully subscribed to our newsletter using email:\n - ${subEm}\n\nThank you for joining our service!\n~ TecSec`
-          );
-          $("#subscribe-email").val("");
+          setTimeout(() => {
+            console.log("Success!", response);
+            $("#subscribe-email").val("");
+            alert(
+              `You have successfully subscribed to our newsletter using email:\n - ${subEm}\n\nThank you for joining our service!\n~ TecSec`
+            );
+
+            setSubmit((prev) => false);
+          }, 3000);
         })
         .catch((error) => {
           console.error("Error!", error.message);
           alert(`Error submitting your information! Try again later!`);
+          setSubmit((prev) => false);
         });
+
+      return;
     }
+    alert("Your information is being submitted! Please stand by...");
   };
 
   return (
