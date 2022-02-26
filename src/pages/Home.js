@@ -16,10 +16,8 @@ function Home() {
     <div>
       <div className="container m-0 p-0 mx-auto">
         <img
-          className="image-fluid"
+          className="image-fluid img-100"
           alt=""
-          width="100%"
-          height="100%"
           src="https://techsec.cf/images/banner.jpg"
         />
       </div>

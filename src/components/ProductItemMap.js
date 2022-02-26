@@ -20,12 +20,10 @@ function ProductItemMap(props) {
               >
                 <div className="card border border-secondary">
                   <img
-                    className="card-img-top border-secondary border-bottom"
+                    className="card-img-top border-secondary border-bottom img-100"
                     src={item.image}
                     alt=""
                     loading="lazy"
-                    width="100%"
-                    height="100%"
                   />
                   <div className="card-body px-0">
                     <div className="h6 font-weight-bold card-title text-center px-1">

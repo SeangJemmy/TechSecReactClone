@@ -12,6 +12,11 @@ html,
   background-color: rgb(245, 245, 245);
 }
 
+.logo {
+  width: 150px;
+  height: 50px;
+}
+
 body {
   background: rgba(207, 207, 207, 0.596) !important;
 }
@@ -92,6 +97,11 @@ footer a:hover {
 
 .box {
   background-color: rgb(241, 238, 238);
+}
+
+.img-100 {
+  width: 100%;
+  height: auto;
 }
 
 details.dt {

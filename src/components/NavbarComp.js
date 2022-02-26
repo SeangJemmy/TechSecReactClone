@@ -23,8 +23,6 @@ function NavbarComp() {
           loading="lazy"
           src="./logo.svg"
           alt=""
-          width="150px"
-          height="50px"
           className="d-inline-block logo"
         />
       </a>
