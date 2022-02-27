@@ -128,10 +128,28 @@ details li {
 .image-upload-button:hover {
   color: #007bff;
 }
+
 .x-upload-button:hover {
-  filter: brightness(240%);
+  filter: invert();
 }
 
+.image-delete {
+  color: red;
+  font-size: 1.4rem;
+  display: flex;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.image-delete:hover {
+  cursor: pointer;
+  filter: invert();
+}
+
+.f-img-container {
+  position: relative;
+}
 /* back to top */
 .myBtn {
   position: fixed; /* Fixed/sticky position */

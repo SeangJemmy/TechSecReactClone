@@ -63,7 +63,6 @@ function Contact() {
               placeholder="Full Name*"
               minLength="5"
               required
-              autoFocus
             />
 
             <label className="sr-only">Username</label>
@@ -130,7 +129,8 @@ function Contact() {
                 id="submitbtn"
                 type="submit"
                 className="btn btn-lg btn-block btn-info"
-                value="Submit"
+                value={isSubmitting ? "Submitting..." : "Submit"}
+                disabled={isSubmitting}
               />
             </div>
           </form>
