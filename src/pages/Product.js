@@ -8,13 +8,13 @@ function Product() {
   SetRouteTitle("TechSec ~ Products");
   const { productData } = GetProductData();
 
-  if (productData == []) {
+  if (productData === []) {
     window.location.reload();
   }
 
   return (
     <div className="m-3">
-      {productData == [] ? (
+      {productData === [] ? (
         <div className="m-3 row">
           <button
             className="mb-4 d-flex btn btn-lg btn-primary mx-auto"

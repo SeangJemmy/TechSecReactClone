@@ -19,6 +19,7 @@ import Product from "./pages/Product";
 import { useEffect, useState } from "react";
 import { ListContextProvider } from "./contexts/ProductItemsContext";
 import { scrollToTop } from "./components/ScrollToTop";
+import PostForm from "./forum_components/PostForm";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -58,6 +59,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/forum" element={<Forum />} />
+        <Route path="/forum-post" element={<PostForm />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgotpassword" element={<Fpass />} />

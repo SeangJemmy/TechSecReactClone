@@ -18,12 +18,12 @@ function FilterMenu(props) {
   const handleSelectSort = (event) => setSelectedSort(event.target.value);
   const handleSelectBrand = (event) => setSelectedBrand(event.target.value);
 
-  const applyFilters = () => {
+  const ApplyFilterProduct = () => {
     let updatedList = props.data;
 
     // Category Filter
     if (selectedCategory) {
-      if (selectedCategory != "all") {
+      if (selectedCategory !== "all") {
         updatedList = updatedList.filter(
           (item) => item.product_category === selectedCategory
         );
@@ -35,7 +35,7 @@ function FilterMenu(props) {
 
     // Brand Filter
     if (selectedBrand) {
-      if (selectedBrand != "all") {
+      if (selectedBrand !== "all") {
         updatedList = updatedList.filter(
           (item) => item.product_brand === selectedBrand
         );
@@ -47,32 +47,32 @@ function FilterMenu(props) {
 
     // Sorting Filter
     if (selectedSort) {
-      if (selectedSort == "asc") {
+      if (selectedSort === "asc") {
         updatedList = updatedList.sort((a, b) =>
           a.product_name.toLowerCase() > b.product_name.toLowerCase() ? 1 : -1
         );
       }
-      if (selectedSort == "desc") {
+      if (selectedSort === "desc") {
         updatedList = updatedList.sort((a, b) =>
           a.product_name.toLowerCase() < b.product_name.toLowerCase() ? 1 : -1
         );
       }
-      if (selectedSort == "default") {
+      if (selectedSort === "default") {
         updatedList = updatedList.sort((a, b) =>
           a.product_id > b.product_id ? 1 : -1
         );
       }
-      if (selectedSort == "recent") {
+      if (selectedSort === "recent") {
         updatedList = updatedList.sort((a, b) =>
           a.product_id < b.product_id ? 1 : -1
         );
       }
-      if (selectedSort == "high") {
+      if (selectedSort === "high") {
         updatedList = updatedList.sort(
           (a, b) => b.product_discount_price - a.product_discount_price
         );
       }
-      if (selectedSort == "low") {
+      if (selectedSort === "low") {
         updatedList = updatedList.sort(
           (a, b) => a.product_discount_price - b.product_discount_price
         );
@@ -98,7 +98,7 @@ function FilterMenu(props) {
   };
 
   useEffect(() => {
-    applyFilters();
+    ApplyFilterProduct();
   }, [props.data, selectedCategory, selectedBrand, selectedSort, searchInput]);
 
   return (

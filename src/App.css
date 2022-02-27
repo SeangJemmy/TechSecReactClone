@@ -121,6 +121,17 @@ details li {
   border-top: 1px solid rgba(0, 0, 0);
 }
 
+.forum-img-upload {
+  display: none;
+}
+
+.image-upload-button:hover {
+  color: #007bff;
+}
+.x-upload-button:hover {
+  filter: brightness(240%);
+}
+
 /* back to top */
 .myBtn {
   position: fixed; /* Fixed/sticky position */
