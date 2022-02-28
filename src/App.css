@@ -186,6 +186,29 @@ details li {
   cursor: pointer;
 }
 
+.forum-table thead tr th,
+.forum-table {
+  border: 1px solid black !important;
+}
+
+.forum-table td {
+  border-right: 1px solid black;
+  border-top: none;
+}
+
+.f-table-body tr td p,
+.f-table-body tr {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.f-table-body tr td,
+.table-info tr th {
+  height: 25px;
+  vertical-align: middle;
+}
+
 /* back to top */
 .myBtn {
   position: fixed; /* Fixed/sticky position */

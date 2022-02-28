@@ -27,6 +27,7 @@ import { LoginContextProvider } from "./contexts/LoginInfoContext";
 import { scrollToTop } from "./components/ScrollToTop";
 import PostForm from "./forum_components/PostForm";
 import Dashboard from "./pages/Dashboard";
+import ForumPost from "./forum_components/ForumPosts";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -63,12 +64,15 @@ function App() {
             </ListContextProvider>
           }
         />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/forum" element={<Forum />} />
-        <Route path="/forum-post" element={<PostForm />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        <Route>
+          <Route path="forum/*" element={<ForumPost />} />
+          <Route path="forum" element={<Forum />} />
+        </Route>
+        <Route path="forum-post" element={<PostForm />} />
         <Route
-          path="/login"
+          path="login"
           element={
             <LoginContextProvider>
               <Login />
@@ -76,7 +80,7 @@ function App() {
           }
         />
         <Route
-          path="/signup"
+          path="signup"
           element={
             <LoginContextProvider>
               <Signup />
@@ -84,18 +88,18 @@ function App() {
           }
         />
         <Route
-          path="/forgotpassword"
+          path="forgotpassword"
           element={
             <LoginContextProvider>
               <Fpass />
             </LoginContextProvider>
           }
         />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/faq" element={<Faq />} />
-        <Route path="/privacypolicy" element={<Pp />} />
-        <Route path="/termsofservice" element={<Tos />} />
-        <Route path="/tracking" element={<Tracking />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="faq" element={<Faq />} />
+        <Route path="privacypolicy" element={<Pp />} />
+        <Route path="termsofservice" element={<Tos />} />
+        <Route path="tracking" element={<Tracking />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
 

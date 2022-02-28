@@ -1,17 +1,19 @@
 import "../App.css";
 import SetRouteTitle from "../components/SetRouteTitle";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { ScrollToZero } from "../components/ScrollToTop";
 
 function Forum() {
   const navigate = useNavigate();
-  const [layout, setLayout] = useState([
+  const [layout] = useState([
     {
       f_id: "f1",
       f_title: "Latest News",
       f_theme: "bg-warning",
       f_title_icon: "fa-solid fa-newspaper",
       f_body_heading: "Posts from the administrators",
+      f_body_heading_link: "/forum/latestnews",
       f_body_icon: "fa-solid fa-comments",
       f_body_description:
         "Messages related to the website from the website administrator.",
@@ -28,6 +30,7 @@ function Forum() {
       f_theme: "bg-primary text-white",
       f_title_icon: "fa-solid fa-users",
       f_body_heading: "Posts from the customers",
+      f_body_heading_link: "/forum/customer",
       f_body_icon: "fa-solid fa-comments",
       f_body_description:
         "Thanks for providing good platform for buying affordable products!",
@@ -44,6 +47,7 @@ function Forum() {
       f_theme: "bg-primary text-white",
       f_title_icon: "fa-solid fa-archive",
       f_body_heading: "Posts from the suppliers",
+      f_body_heading_link: "/forum/supplier",
       f_body_icon: "fa-solid fa-comments",
       f_body_description:
         "Thanks for providing good platform for selling products!",
@@ -60,6 +64,7 @@ function Forum() {
       f_theme: "bg-primary text-white",
       f_title_icon: "fa-solid fa-newspaper",
       f_body_heading: "Posts about the products",
+      f_body_heading_link: "/forum/product",
       f_body_icon: "fa-solid fa-comments",
       f_body_description:
         "More poducts need to be added to your platform! We support your website! Thank you!",
@@ -109,9 +114,12 @@ function Forum() {
                     <div className="wrap-col">
                       <h4 className="text-center">
                         <i className={`${data.f_body_icon}`}></i>&nbsp;
-                        <a href="forumpages/Adminposts.html">
+                        <Link
+                          to={data.f_body_heading_link}
+                          onClick={ScrollToZero}
+                        >
                           {data.f_body_heading}
-                        </a>
+                        </Link>
                       </h4>
                       <p className="m-0">
                         &emsp;&emsp;{data.f_body_description}
