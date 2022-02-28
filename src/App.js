@@ -1,7 +1,12 @@
 import "./App.css";
 import SetRouteTitle from "./components/SetRouteTitle";
 import NavbarComp from "./components/NavbarComp";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
 import FooterComp from "./components/FooterComp";
 import About from "./pages/About";
 import "./main";
@@ -90,6 +95,7 @@ function App() {
 
 const Error404 = () => {
   SetRouteTitle("TechSec ~ Page Not Found");
+  const navigate = useNavigate();
   return (
     <div className="m-3 row">
       <a className="mx-auto mt-4" href="./">
@@ -109,7 +115,7 @@ const Error404 = () => {
       <button
         className="mb-4 d-flex btn btn-lg btn-primary mx-auto"
         onClick={() => {
-          window.location.href = "./";
+          navigate("/");
         }}
       >
         Go to Home Page
