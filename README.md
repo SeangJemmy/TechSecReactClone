@@ -1,1 +1,1 @@
-## TechSec Clone ~ We Got What You Need
+## TechSec ~ We Got What You Need
