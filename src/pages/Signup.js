@@ -80,6 +80,10 @@ function Signup() {
   SetRouteTitle("TechSec ~ Sign Up");
   const navigate = useNavigate();
 
+  const lowerCase = (props) => {
+    return props.toString().toLowerCase();
+  };
+
   const userPass = [
     {
       user: "admin",
@@ -111,12 +115,13 @@ function Signup() {
     }
 
     if (
-      e.target.elements.email.value !== e.target.elements.confirm_email.value
+      lowerCase(e.target.elements.email.value) !==
+      lowerCase(e.target.elements.confirm_email.value)
     ) {
       return dispatch({ type: "unmatch-email" });
     }
 
-    if (e.target.elements.email.value === userPass[0].email) {
+    if (lowerCase(e.target.elements.email.value) === userPass[0].email) {
       return dispatch({ type: "email-exist" });
     }
 

@@ -11,6 +11,12 @@ function LoginReducer(state, action) {
         [action.field]: action.value,
       };
     }
+    case "ensure-username": {
+      return {
+        ...state,
+        username: action.name,
+      };
+    }
     case "login": {
       return {
         ...state,
@@ -72,21 +78,29 @@ function Login() {
   ];
   const [state, dispatch] = useReducer(LoginReducer, initialState);
   const { username, password, error, isLoading, isLoggedIn, isRem } = state;
+  const lowerCase = (props) => {
+    return props.toString().toLowerCase();
+  };
+
   const loginHandler = (e) => {
     e.preventDefault();
     dispatch({ type: "login" });
     setTimeout(() => {
       if (
-        e.target.elements.username.value === userPass[0].user &&
-        e.target.elements.password.value === userPass[0].pass
+        lowerCase(e.target.elements.username.value) === userPass[0].user ||
+        lowerCase(e.target.elements.username.value) === userPass[0].email
       ) {
-        dispatch({ type: "success" });
-        console.log("Success");
-        return;
+        if (e.target.elements.password.value === userPass[0].pass) {
+          dispatch({ type: "ensure-username", name: `${userPass[0].user}` });
+          dispatch({ type: "success" });
+          console.log("Success");
+          return;
+        }
       }
       dispatch({ type: "error" });
     }, 3000);
   };
+
   const handleInput = (e) => {
     dispatch({
       type: "field",
@@ -104,7 +118,6 @@ function Login() {
   };
 
   const handleLogout = () => {
-    console.log(isRem);
     if (isRem) {
       dispatch({ type: "logout-rem" });
       return;
@@ -119,7 +132,7 @@ function Login() {
           {isLoggedIn ? (
             <div className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 mx-auto text-center">
               <h1>
-                Welcome <i>{username}</i>!
+                Welcome <span className="h1 text-primary">{username}</span>!
               </h1>
               <button
                 className="btn btn-lg btn-secondary"

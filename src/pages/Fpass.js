@@ -50,6 +50,10 @@ const initialState = {
 function Fpass() {
   SetRouteTitle("TechSec ~ Forgot Password");
 
+  const lowerCase = (props) => {
+    return props.toString().toLowerCase();
+  };
+
   const userPass = [
     {
       user: "admin",
@@ -74,7 +78,7 @@ function Fpass() {
     e.preventDefault();
     dispatch({ type: "requesting" });
     setTimeout(() => {
-      if (e.target.elements.email.value === userPass[0].email) {
+      if (lowerCase(e.target.elements.email.value) === userPass[0].email) {
         console.log("Requested password reset!");
         dispatch({ type: "success" });
         return;
