@@ -1,9 +1,13 @@
 import React from "react";
 import "../App.css";
-import { BrowserRouter as Router, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, NavLink, Link } from "react-router-dom";
 import { ScrollToZero } from "../components/ScrollToTop";
 
 function NavbarComp() {
+  const searchHandler = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light" id="navv">
       <button
@@ -18,14 +22,20 @@ function NavbarComp() {
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <a className="navbar-brand" href="./" aria-label="Back to Main Page">
+      <Link
+        className="navbar-brand"
+        to="/"
+        aria-label="Back to Main Page"
+        data-toggle="collapse"
+        data-target=".navbar-collapse.show"
+      >
         <img
           loading="lazy"
           src="./logo.svg"
           alt=""
           className="d-inline-block logo"
         />
-      </a>
+      </Link>
 
       <div className="collapse navbar-collapse" id="TechSecNavToggler">
         <ul className="navbar-nav mr-auto text-center mt-2 mt-lg-0">
@@ -173,7 +183,10 @@ function NavbarComp() {
             </div>
           </li>
         </ul>
-        <form className="form-inline my-2 my-lg-0 justify-content-center">
+        <form
+          onSubmit={searchHandler}
+          className="form-inline my-2 my-lg-0 justify-content-center"
+        >
           <input
             className="form-control mr-sm-2"
             type="search"
