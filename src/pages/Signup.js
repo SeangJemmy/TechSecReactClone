@@ -2,6 +2,7 @@ import "../App.css";
 import SetRouteTitle from "../components/SetRouteTitle";
 import { Link, useNavigate } from "react-router-dom";
 import React, { useReducer } from "react";
+import { GetUserInfo } from "../contexts/LoginInfoContext";
 
 function SignupReducer(state, action) {
   switch (action.type) {
@@ -84,13 +85,7 @@ function Signup() {
     return props.toString().toLowerCase();
   };
 
-  const userPass = [
-    {
-      user: "admin",
-      email: "admin@techsec.cf",
-      pass: "admin123",
-    },
-  ];
+  const { userPass } = GetUserInfo();
 
   const [state, dispatch] = useReducer(SignupReducer, initialState);
 
@@ -174,7 +169,7 @@ function Signup() {
       <div className="container-fluid">
         <div className="row">
           {isSignedup ? (
-            <div className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-2 mx-auto text-center">
+            <div className="col-12 col-sm-10 col-md-8 mx-auto text-center">
               <h1>Successfully signed up!</h1>
               <button
                 className="btn btn-lg btn-primary mt-3"

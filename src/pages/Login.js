@@ -1,7 +1,8 @@
 import "../App.css";
 import SetRouteTitle from "../components/SetRouteTitle";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useReducer } from "react";
+import { GetUserInfo } from "../contexts/LoginInfoContext";
 
 function LoginReducer(state, action) {
   switch (action.type) {
@@ -69,13 +70,8 @@ const initialState = {
 
 function Login() {
   SetRouteTitle("TechSec ~ Login");
-  const userPass = [
-    {
-      user: "admin",
-      email: "admin@techsec.cf",
-      pass: "admin123",
-    },
-  ];
+  const navigate = useNavigate();
+  const { userPass } = GetUserInfo();
   const [state, dispatch] = useReducer(LoginReducer, initialState);
   const { username, password, error, isLoading, isLoggedIn, isRem } = state;
   const lowerCase = (props) => {
@@ -134,6 +130,14 @@ function Login() {
               <h1>
                 Welcome <span className="h1 text-primary">{username}</span>!
               </h1>
+              <button
+                className="btn btn-lg btn-primary mr-2"
+                onClick={() => {
+                  navigate("/dashboard");
+                }}
+              >
+                Dashboard
+              </button>
               <button
                 className="btn btn-lg btn-secondary"
                 onClick={handleLogout}

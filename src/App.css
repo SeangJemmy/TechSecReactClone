@@ -150,6 +150,42 @@ details li {
 .f-img-container {
   position: relative;
 }
+
+.dash-item:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.dash-item:hover small {
+  font-weight: bold;
+}
+
+.disableA,
+.disableA:hover,
+.dash-nav-item li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.dash-nav-item li a:hover {
+  background-color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  filter: invert(100%);
+}
+
+.summary-grid {
+  max-height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.detail-column li i:hover {
+  color: red;
+  cursor: pointer;
+}
+
 /* back to top */
 .myBtn {
   position: fixed; /* Fixed/sticky position */

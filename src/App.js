@@ -23,8 +23,10 @@ import Contact from "./pages/Contact";
 import Product from "./pages/Product";
 import { useEffect, useState } from "react";
 import { ListContextProvider } from "./contexts/ProductItemsContext";
+import { LoginContextProvider } from "./contexts/LoginInfoContext";
 import { scrollToTop } from "./components/ScrollToTop";
 import PostForm from "./forum_components/PostForm";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -65,9 +67,31 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/forum" element={<Forum />} />
         <Route path="/forum-post" element={<PostForm />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/forgotpassword" element={<Fpass />} />
+        <Route
+          path="/login"
+          element={
+            <LoginContextProvider>
+              <Login />
+            </LoginContextProvider>
+          }
+        />
+        <Route
+          path="/signup"
+          element={
+            <LoginContextProvider>
+              <Signup />
+            </LoginContextProvider>
+          }
+        />
+        <Route
+          path="/forgotpassword"
+          element={
+            <LoginContextProvider>
+              <Fpass />
+            </LoginContextProvider>
+          }
+        />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/privacypolicy" element={<Pp />} />
         <Route path="/termsofservice" element={<Tos />} />

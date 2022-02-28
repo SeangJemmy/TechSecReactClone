@@ -3,6 +3,7 @@ import SetRouteTitle from "../components/SetRouteTitle";
 import { Link } from "react-router-dom";
 
 import React, { useReducer } from "react";
+import { GetUserInfo } from "../contexts/LoginInfoContext";
 
 function ForgotPassReducer(state, action) {
   switch (action.type) {
@@ -54,13 +55,7 @@ function Fpass() {
     return props.toString().toLowerCase();
   };
 
-  const userPass = [
-    {
-      user: "admin",
-      email: "admin@techsec.cf",
-      pass: "admin123",
-    },
-  ];
+  const { userPass } = GetUserInfo();
 
   const [state, dispatch] = useReducer(ForgotPassReducer, initialState);
 

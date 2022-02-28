@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import { BrowserRouter as Router, NavLink, Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { ScrollToZero } from "../components/ScrollToTop";
 
 function NavbarComp() {
