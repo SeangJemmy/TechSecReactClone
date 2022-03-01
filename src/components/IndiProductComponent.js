@@ -39,14 +39,14 @@ function IndiProductComponent(props) {
               </a>
             </div>
             <div className="row justify-content-center my-3 mb-4">
-              <button className="btn btn-warning d-flex mr-2">
+              <button className="btn btn-warning d-flex mr-2 border border-secondary">
                 <div>
                   <i className="fa-solid fa-star m-0 p-0"></i>
                   &ensp;Favorite
                 </div>
               </button>
 
-              <button className="btn btn-primary d-flex">
+              <button className="btn btn-primary d-flex border border-secondary">
                 {" "}
                 <div>
                   <i className="fa-solid fa-comment m-0 p-0"></i>

@@ -209,7 +209,7 @@ details li {
   vertical-align: middle;
 }
 .product-tabs-container {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(185, 185, 185);
 }
 
 .product-tabs li a {
@@ -229,6 +229,10 @@ details li {
   border: none;
   color: black !important;
   font-weight: bold;
+}
+
+.product-tabs li a.active {
+  border-bottom: 1px solid black !important;
 }
 
 .product-tabs li:hover a {
