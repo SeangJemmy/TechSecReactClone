@@ -208,6 +208,32 @@ details li {
   height: 25px;
   vertical-align: middle;
 }
+.product-tabs-container {
+  border-bottom: 1px solid gray;
+}
+
+.product-tabs li a {
+  color: black;
+  font-family: "Calibri", sans-serif;
+}
+.product-tabs li,
+.product-tabs ul,
+.product-tabs ul li:hover a {
+  border: none;
+  background-color: transparent;
+}
+
+.product-tabs li:hover a,
+.product-tabs li a.active {
+  background-color: orange !important;
+  border: none;
+  color: black !important;
+  font-weight: bold;
+}
+
+.product-tabs li:hover a {
+  font-size: 1.2rem;
+}
 
 /* back to top */
 .myBtn {

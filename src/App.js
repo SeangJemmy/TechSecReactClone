@@ -28,6 +28,7 @@ import { scrollToTop } from "./components/ScrollToTop";
 import PostForm from "./forum_components/PostForm";
 import Dashboard from "./pages/Dashboard";
 import ForumPost from "./forum_components/ForumPosts";
+import IndividualProduct from "./components/IndividualProduct";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -43,81 +44,52 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <NavbarComp />
+    <ListContextProvider>
+      <LoginContextProvider>
+        <Router>
+          <NavbarComp />
 
-      <Routes>
-        <Route
-          path="/"
-          exact
-          element={
-            <ListContextProvider>
-              <Home />
-            </ListContextProvider>
-          }
-        />
-        <Route
-          path="/product"
-          element={
-            <ListContextProvider>
-              <Product />
-            </ListContextProvider>
-          }
-        />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route>
-          <Route path="forum/*" element={<ForumPost />} />
-          <Route path="forum" element={<Forum />} />
-        </Route>
-        <Route path="forum-post" element={<PostForm />} />
-        <Route
-          path="login"
-          element={
-            <LoginContextProvider>
-              <Login />
-            </LoginContextProvider>
-          }
-        />
-        <Route
-          path="signup"
-          element={
-            <LoginContextProvider>
-              <Signup />
-            </LoginContextProvider>
-          }
-        />
-        <Route
-          path="forgotpassword"
-          element={
-            <LoginContextProvider>
-              <Fpass />
-            </LoginContextProvider>
-          }
-        />
-        <Route path="dashboard" element={<Dashboard />} />
-        <Route path="faq" element={<Faq />} />
-        <Route path="privacypolicy" element={<Pp />} />
-        <Route path="termsofservice" element={<Tos />} />
-        <Route path="tracking" element={<Tracking />} />
-        <Route path="*" element={<Error404 />} />
-      </Routes>
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route>
+              <Route path="product/*" element={<IndividualProduct />} />
+              <Route path="product" element={<Product />} />
+            </Route>
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route>
+              <Route path="forum/*" element={<ForumPost />} />
+              <Route path="forum" element={<Forum />} />
+            </Route>
+            <Route path="forum-post" element={<PostForm />} />
+            <Route path="login" element={<Login />} />
+            <Route path="signup" element={<Signup />} />
+            <Route path="forgotpassword" element={<Fpass />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="faq" element={<Faq />} />
+            <Route path="privacypolicy" element={<Pp />} />
+            <Route path="termsofservice" element={<Tos />} />
+            <Route path="tracking" element={<Tracking />} />
+            <Route path="*" element={<Error404 />} />
+          </Routes>
 
-      <FooterComp />
-      {showButton && (
-        <button onClick={scrollToTop} className="myBtn">
-          <img
-            className="UpArrow_style"
-            alt=""
-            loading="lazy"
-            src="images/Up-Arrow.svg"
-            width="30"
-            height="54"
-            aria-label="Click to Top"
-          />
-        </button>
-      )}
-    </Router>
+          <FooterComp />
+          {showButton && (
+            <button onClick={scrollToTop} className="myBtn">
+              <img
+                className="UpArrow_style"
+                alt=""
+                loading="lazy"
+                src="images/Up-Arrow.svg"
+                width="30"
+                height="54"
+                aria-label="Click to Top"
+              />
+            </button>
+          )}
+        </Router>
+      </LoginContextProvider>
+    </ListContextProvider>
   );
 }
 

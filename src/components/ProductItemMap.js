@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
+import { Link } from "react-router-dom";
+import { ScrollToZero } from "./ScrollToTop";
 
 function ProductItemMap(props) {
   const [dataP, setData] = useState(props.data);
@@ -45,10 +47,17 @@ function ProductItemMap(props) {
                       <a href="#" className="btn btn-warning btn-sm mx-1 my-1">
                         <i className="fa-solid fa-bookmark mr-2"></i>Save
                       </a>
-                      <a href="#" className="btn btn-warning btn-sm mx-1 my-1">
+                      <Link
+                        to={`/product/${
+                          item.product_id
+                        }/${item.product_name.replaceAll(" ", "-")}`}
+                        id={item.product_id}
+                        className="btn btn-warning btn-sm mx-1 my-1"
+                        onClick={ScrollToZero}
+                      >
                         <i className="fa-solid fa-circle-exclamation mr-2"></i>
                         Details
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
