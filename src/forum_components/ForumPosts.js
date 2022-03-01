@@ -66,8 +66,8 @@ function ForumPost() {
 
         <div className="table-responsive">
           <table className="table table-hover forum-table">
-            <thead className="table-info">
-              <tr className="text-center">
+            <thead>
+              <tr className="text-center bg-primary text-white">
                 <th scope="col">#</th>
                 <th scope="col">Subject</th>
                 <th scope="col">
@@ -78,7 +78,7 @@ function ForumPost() {
                 </th>
               </tr>
             </thead>
-            <tbody className="f-table-body">
+            <tbody className="f-table-body bg-white">
               {postArray.map((d, i) => {
                 return (
                   <tr key={i}>
