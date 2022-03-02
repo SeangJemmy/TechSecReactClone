@@ -29,6 +29,7 @@ import PostForm from "./forum_components/PostForm";
 import Dashboard from "./pages/Dashboard";
 import ForumPost from "./forum_components/ForumPosts";
 import IndividualProduct from "./components/IndividualProduct";
+import CommentPost from "./forum_components/CommentPost";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -58,6 +59,7 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
             <Route>
+              <Route path="forum/latestnews/post" element={<CommentPost />} />
               <Route path="forum/*" element={<ForumPost />} />
               <Route path="forum" element={<Forum />} />
             </Route>

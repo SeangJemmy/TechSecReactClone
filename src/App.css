@@ -239,6 +239,50 @@ details li {
   font-size: 1.2rem;
 }
 
+.forum-post-circle {
+  width: 70px;
+}
+
+.back-btn:hover {
+  text-decoration: none;
+}
+
+.back-btn:hover span,
+.back-btn:hover i {
+  color: rgb(0, 68, 255);
+  text-shadow: 1px 1px black;
+}
+
+.post-footer-banner div:hover {
+  background-color: rgb(231, 231, 231);
+  cursor: pointer;
+}
+
+.comment-wrap {
+  position: relative;
+}
+
+.comment-post {
+  border-radius: 10rem;
+}
+
+.profile-small {
+  height: 2.5rem;
+}
+
+.send-comment-btn {
+  border-radius: 50%;
+  height: 33px;
+  width: 33px;
+  position: absolute;
+  right: 0.2rem;
+  top: 0.18rem;
+}
+
+.border-round {
+  border-radius: 1rem;
+}
+
 /* back to top */
 .myBtn {
   position: fixed; /* Fixed/sticky position */

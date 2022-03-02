@@ -86,7 +86,9 @@ function ForumPost() {
                       <i className={`fa-solid ${d.status} h3`}></i>
                     </td>
                     <td>
-                      <p className="font-weight-bold">{d.subject}</p>
+                      <p className="font-weight-bold">
+                        <Link to="/forum/latestnews/post">{d.subject}</Link>
+                      </p>
                       <p>
                         <small>by {d.username}</small>
                       </p>
