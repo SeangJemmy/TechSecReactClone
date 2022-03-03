@@ -264,6 +264,7 @@ details li {
 
 .comment-post {
   border-radius: 10rem;
+  height: 40px;
 }
 
 .profile-small {
@@ -272,11 +273,13 @@ details li {
 
 .send-comment-btn {
   border-radius: 50%;
-  height: 33px;
-  width: 33px;
+  padding: 0;
+  margin: 0;
+  height: 30px;
+  width: 30px;
   position: absolute;
-  right: 0.2rem;
-  top: 0.18rem;
+  right: 5px;
+  top: 5px;
 }
 
 .border-round {

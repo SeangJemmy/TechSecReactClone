@@ -4,6 +4,10 @@ import "../App.css";
 
 function CommentPost() {
   const [isShowComment, setIsShowComment] = useState(false);
+  const [isReply, setIsReply] = useState(false);
+  const [isLike, setIsLike] = useState(false);
+  const [isPostLike, setIsPostLike] = useState(false);
+  const [isSharing, setIsSharing] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,17 +26,15 @@ function CommentPost() {
       </div>
       <div className="container border border-secondary bg-light">
         <div className="row d-flex justify-content-left ml-1">
-          <div className="col-12 m-0 my-3">
+          <div className="col-12 m-0 my-3 p-0">
             <img
               loading="lazy"
               src="./images/deal.png"
               alt=""
-              className="rounded float-start forum-post-circle mx-2"
+              className="rounded float-start forum-post-circle mr-2"
             />
             <span className="font-weight-bold h5 mx-2">Username</span>
-            <span className="text-center mx-2 font-italic">
-              Posted on: 23/07/2022
-            </span>
+            <small className="text-center mx-2 font-italic">23/07/2022</small>
           </div>
         </div>
         <div className="row d-flex justify-content-left mx-auto px-2">
@@ -73,18 +75,37 @@ function CommentPost() {
               isShowComment ? "border-bottom" : ""
             } row m-0 mt-3 p-0 border-top border-secondary post-footer-banner p-1`}
           >
-            <div className="col-4 col-md-4 text-center p-1">
+            <div
+              className={`${
+                isPostLike ? "text-primary" : ""
+              } col-4 col-md-4 text-center p-1`}
+              onClick={() => {
+                setIsPostLike(!isPostLike);
+              }}
+            >
               <i className="fa-solid fa-thumbs-up mr-1"></i>
               <span>Like</span>
             </div>
             <div
-              className="col-4 col-md-4 text-center p-1"
+              className={`${
+                isShowComment ? "text-primary" : ""
+              } col-4 col-md-4 text-center p-1`}
               onClick={() => setIsShowComment(!isShowComment)}
             >
               <i className="fa-solid fa-comment mr-1"></i>
               <span>Comment</span>
             </div>
-            <div className="col-4 col-md-4 text-center p-1">
+            <div
+              className={`${
+                isSharing ? "text-primary" : ""
+              } col-4 col-md-4 text-center p-1`}
+              onClick={() => {
+                setIsSharing((prev) => true);
+                setTimeout(() => {
+                  setIsSharing((prev) => false);
+                }, 100);
+              }}
+            >
               <i className="fa-solid fa-share mr-1"></i>
               <span>Share</span>
             </div>
@@ -127,12 +148,12 @@ function CommentPost() {
                       loading="lazy"
                       src="./images/deal.png"
                       alt=""
-                      className="rounded float-start profile-small m-2"
+                      className="rounded float-start profile-small my-2 mr-2"
                     />
                     <span className="m-2">Username</span>
-                    <span className="text-center mx-2 font-italic">
+                    <small className="text-center mx-2 font-italic">
                       24/07/2022
-                    </span>
+                    </small>
                   </div>
                 </div>
                 <div className="row m-0 p-0">
@@ -148,16 +169,61 @@ function CommentPost() {
                   like Aldus PageMaker including versions of Lorem Ipsum.
                 </div>
                 <div className="row m-0 mt-2 p-0 border-top border-secondary post-footer-banner p-1">
-                  <div className="col-6 text-center p-1">
+                  <div
+                    className={`col-6 text-center p-1 ${
+                      !isLike ? "" : "text-primary"
+                    }`}
+                    onClick={() => {
+                      setIsLike(!isLike);
+                    }}
+                  >
                     <i className="fa-solid fa-thumbs-up mr-1"></i>
                     <span>Like</span>
                   </div>
-                  <div className="col-6 text-center p-1">
+                  <div
+                    className={`col-6 text-center p-1 ${
+                      !isReply ? "" : "text-primary"
+                    }`}
+                    onClick={() => {
+                      setIsReply(!isReply);
+                    }}
+                  >
                     <i className="fa-solid fa-comment mr-1"></i>
                     <span>Reply</span>
                   </div>
                 </div>
               </div>
+
+              {!isReply ? (
+                <></>
+              ) : (
+                <div className="container m-0 p-0">
+                  <div className="row my-3">
+                    <form
+                      className="col-12 row mx-auto justify-content-center"
+                      onSubmit={handleSubmit}
+                    >
+                      <img
+                        src="./images/deal.png"
+                        alt=""
+                        className="profile-small col- m-0 mr-2"
+                      />
+                      <div className="col-10 col-lg-11 p-0 comment-wrap">
+                        <button className="btn send-comment-btn btn-primary d-flex m-0 p-0">
+                          <i className="fa-solid fa-arrow-right p-auto m-auto"></i>
+                        </button>
+                        <input
+                          type="text"
+                          className="form-control comment-post m-0"
+                          id="comment"
+                          aria-describedby="comment"
+                          placeholder="Write a comment..."
+                        />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              )}
             </div>
           </>
         )}
