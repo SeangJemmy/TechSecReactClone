@@ -30,6 +30,7 @@ import Dashboard from "./pages/Dashboard";
 import ForumPost from "./forum_components/ForumPosts";
 import IndividualProduct from "./components/IndividualProduct";
 import CommentPost from "./forum_components/CommentPost";
+import SupplierPost from "./components/SupplierPost";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -53,6 +54,7 @@ function App() {
           <Routes>
             <Route path="/" exact element={<Home />} />
             <Route>
+              <Route path="product/post" element={<SupplierPost />} />
               <Route path="product/*" element={<IndividualProduct />} />
               <Route path="product" element={<Product />} />
             </Route>
