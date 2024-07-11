@@ -13,19 +13,24 @@ export function GetProductData() {
 export const ListContextProvider = ({ children }) => {
   const [productData, setPD] = useState([]);
 
-  useEffect(() => {
-        fetch('/db.json')
-            .then(response => response.json())
-            .then(data => {
-                setPD(data.productitems);
-            })
-            .catch(error => {
-               alert(
-          `There was a problem retrieving data from api server. Try reloading your browser! ~TechSec\nError Code: ${er}`
+ useEffect(() => {
+    fetch('/db.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setPD(data.productitems);
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        alert(
+          `There was a problem retrieving data from the server. Try reloading your browser! Error: ${error.message}`
         );
-                console.error('Error fetching data:', error);
-            });
-    }, []);
+      });
+  }, []);
   
   // useEffect(() => {
   //   api
