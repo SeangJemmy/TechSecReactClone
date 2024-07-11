@@ -4,7 +4,7 @@ const instance = axios.create({
   // baseURL: "https://techsec.free.beeceptor.com",
   // baseURL: "https://techsecapi.free.beeceptor.com",
   // baseURL: "https://techsecapi2.free.beeceptor.com",
-  baseURL: "https://techsecapi3.free.beeceptor.com",
+  baseURL: "https://techsec.netlify.app/techsecreactapi.json",
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
