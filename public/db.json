@@ -1,0 +1,325 @@
+{
+  "productitems": [
+    {
+      "product_id": "p00001",
+      "product_name": "iPhone 13 Pro Max 128GB",
+      "product_category": "phone",
+      "product_price": "1599",
+      "product_discount_price": "1329",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529230/Assets/iphone/1_j2tdur.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00002",
+      "product_name": "iPhone 13 Pro Max 256GB",
+      "product_category": "phone",
+      "product_price": "1699",
+      "product_discount_price": "1449",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529231/Assets/iphone/2_rx6rxb.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00003",
+      "product_name": "iPhone 13 Pro 128GB",
+      "product_category": "phone",
+      "product_price": "1499",
+      "product_discount_price": "1229",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529231/Assets/iphone/3_ktqo7n.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00004",
+      "product_name": "iPhone 13 Pro 256GB",
+      "product_category": "phone",
+      "product_price": "1559",
+      "product_discount_price": "1359",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529230/Assets/iphone/4_zxvxqc.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00005",
+      "product_name": "iPhone 13 128GB",
+      "product_category": "phone",
+      "product_price": "1199",
+      "product_discount_price": "949",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529230/Assets/iphone/5_mnnelh.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00006",
+      "product_name": "iPhone 13 256GB",
+      "product_category": "phone",
+      "product_price": "1299",
+      "product_discount_price": "1079",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529230/Assets/iphone/6_wbvrq2.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00007",
+      "product_name": "iPhone 13 MiNi 128GB",
+      "product_category": "phone",
+      "product_price": "1099",
+      "product_discount_price": "849",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529230/Assets/iphone/7_ckzoez.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00008",
+      "product_name": "iPhone 13 MiNi 256GB",
+      "product_category": "phone",
+      "product_price": "1149",
+      "product_discount_price": "969",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529230/Assets/iphone/8_teq67b.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00009",
+      "product_name": "Samsung Galaxy Tab S7",
+      "product_category": "tablet",
+      "product_price": "700",
+      "product_discount_price": "600",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529257/Assets/tablet/9_hb0ho8.webp",
+      "product_brand": "samsung",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00010",
+      "product_name": "Samsung Galaxy Tab A7 Lite",
+      "product_category": "tablet",
+      "product_price": "138.24",
+      "product_discount_price": "130",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529256/Assets/tablet/10_rblivg.webp",
+      "product_brand": "samsung",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00011",
+      "product_name": "Samsung Galaxy Tab S8 Ultra",
+      "product_category": "tablet",
+      "product_price": "1300",
+      "product_discount_price": "1200",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529256/Assets/tablet/11_ytixay.webp",
+      "product_brand": "samsung",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00012",
+      "product_name": "iPad Air 4 64GB ",
+      "product_category": "tablet",
+      "product_price": "799",
+      "product_discount_price": "650",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529256/Assets/tablet/12_e6jl98.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00013",
+      "product_name": "iPad Pro 11 128GB",
+      "product_category": "tablet",
+      "product_price": "1050",
+      "product_discount_price": "1000",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529256/Assets/tablet/13_itigvg.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00014",
+      "product_name": "iPad Mini 6 64GB",
+      "product_category": "tablet",
+      "product_price": "620",
+      "product_discount_price": "600",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529256/Assets/tablet/14_bcxhz2.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00015",
+      "product_name": "Huawei MatePad T 10s",
+      "product_category": "tablet",
+      "product_price": "300",
+      "product_discount_price": "250",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529256/Assets/tablet/15_nztbia.webp",
+      "product_brand": "huawei",
+      "product_verified": "true"
+    },
+
+    {
+      "product_id": "p00016",
+      "product_name": "Huawei MatePad Pro",
+      "product_category": "tablet",
+      "product_price": "680",
+      "product_discount_price": "650",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529257/Assets/tablet/16_xipz86.webp",
+      "product_brand": "huawei",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00017",
+      "product_name": "MacBook Pro M1 Pro",
+      "product_category": "laptop",
+      "product_price": "2150",
+      "product_discount_price": "2090",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529265/Assets/laptop/1_t4r3hq.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00018",
+      "product_name": "MacBook Air M12020",
+      "product_category": "laptop",
+      "product_price": "900",
+      "product_discount_price": "880",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529265/Assets/laptop/2_lwdwza.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00019",
+      "product_name": "Microsoft Surface Pro X LTE",
+      "product_category": "laptop",
+      "product_price": "990",
+      "product_discount_price": "940",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529265/Assets/laptop/3_a6h0ba.webp",
+      "product_brand": "microsoft",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00020",
+      "product_name": "Microsoft Surface Pro 8 2021",
+      "product_category": "laptop",
+      "product_price": "1270",
+      "product_discount_price": "1220",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529265/Assets/laptop/4_y1s1xh.webp",
+      "product_brand": "microsoft",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00021",
+      "product_name": "DELL G15 5515 Gaming",
+      "product_category": "laptop",
+      "product_price": "1240",
+      "product_discount_price": "1200",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529265/Assets/laptop/5_qa6t4o.webp",
+      "product_brand": "dell",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00022",
+      "product_name": "DELL Inspiron 7610 Plus",
+      "product_category": "laptop",
+      "product_price": "1140",
+      "product_discount_price": "1090",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529265/Assets/laptop/6_zgbdkt.webp",
+      "product_brand": "dell",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00023",
+      "product_name": "DELL Inspiron 5406",
+      "product_category": "laptop",
+      "product_price": "780",
+      "product_discount_price": "740",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529266/Assets/laptop/7_joggha.webp",
+      "product_brand": "dell",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00024",
+      "product_name": "HP OMEN 16 2022",
+      "product_category": "laptop",
+      "product_price": "1380",
+      "product_discount_price": "1300",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529266/Assets/laptop/8_aqgdki.webp",
+      "product_brand": "hp",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00025",
+      "product_name": "Apple MagSafe Charger",
+      "product_category": "accessories",
+      "product_price": "50",
+      "product_discount_price": "49.99",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529245/Assets/accessories/1_zm5cs4.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00026",
+      "product_name": "Samsung Adapter 25W Type-C",
+      "product_category": "accessories",
+      "product_price": "25.49",
+      "product_discount_price": "24.99",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529245/Assets/accessories/2_gt63vv.webp",
+      "product_brand": "samsung",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00027",
+      "product_name": "Apple 20W Type-C Adapter",
+      "product_category": "accessories",
+      "product_price": "28.99",
+      "product_discount_price": "27.99",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529245/Assets/accessories/3_lnuzxa.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00028",
+      "product_name": "Airpod Pro 2",
+      "product_category": "accessories",
+      "product_price": "239.99",
+      "product_discount_price": "229.99",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529245/Assets/accessories/4_agebi7.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00029",
+      "product_name": "Airpods Max",
+      "product_category": "accessories",
+      "product_price": "599.99",
+      "product_discount_price": "569.99",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529245/Assets/accessories/5_w5emgj.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00030",
+      "product_name": "Apple AirTag",
+      "product_category": "accessories",
+      "product_price": "38.99",
+      "product_discount_price": "37.99",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529245/Assets/accessories/6_fjxmpc.webp",
+      "product_brand": "apple",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00031",
+      "product_name": "Sony WH-1000XM4 Wireless",
+      "product_category": "accessories",
+      "product_price": "369",
+      "product_discount_price": "335",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529245/Assets/accessories/7_x9i1jp.webp",
+      "product_brand": "sony",
+      "product_verified": "true"
+    },
+    {
+      "product_id": "p00032",
+      "product_name": "Samsung Galaxy Buds Live",
+      "product_category": "accessories",
+      "product_price": "125",
+      "product_discount_price": "114.99",
+      "image": "https://res.cloudinary.com/techsec/image/upload/v1645529245/Assets/accessories/8_hjycqy.webp",
+      "product_brand": "samsung",
+      "product_verified": "true"
+    }
+  ]
+}
